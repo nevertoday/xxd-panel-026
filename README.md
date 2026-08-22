@@ -12,7 +12,7 @@
 [![Four Modes](https://img.shields.io/badge/Modes-4-a76f62?style=flat-square)](#四种输出共享同一种人文几何)
 [![Raster Output](https://img.shields.io/badge/Output-PNG-65766d?style=flat-square)](#边界与信任)
 
-<strong>简体中文</strong> · <a href="README.en.md">English</a> · <a href="README.ja.md">日本語</a> · <a href="README.ar.md">العربية</a>
+<strong>简体中文</strong> · <a href="README.en.md">English</a> · <a href="README.ja.md">日本語</a> · <a href="README.ko.md">한국어</a> · <a href="README.ar.md">العربية</a>
 
 </div>
 
@@ -138,7 +138,7 @@ $xxd-panel-026
 ```text
 xxd-panel-026/
 ├── SKILL.md
-├── README.md / README.en.md / README.ja.md / README.ar.md
+├── README.md / README.en.md / README.ja.md / README.ko.md / README.ar.md
 ├── agents/openai.yaml
 ├── assets/
 │   ├── banner.svg
