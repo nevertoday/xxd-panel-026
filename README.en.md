@@ -32,7 +32,7 @@ Many “photo to minimal poster” workflows end with the same circles, pastel b
 - geometry, contour, structure, and negative space reorganise the subject rather than erase it;
 - four to six low-stimulation colour roles are translated from the source instead of selected from a fixed palette;
 - depth is limited to pressed or gently raised paper, never overt 3D;
-- a source-bound title and microcopy are present by default.
+- before generation, choose automatic copy, custom copy, or text-free output; automatic copy produces a source-bound title and microcopy.
 
 ## From photographic fact to humanist geometry
 
@@ -61,14 +61,16 @@ Samples are in production. The four mode slots below are ready to be replaced wi
 
 ## Four outputs, one humanist geometry
 
-| Mode | Default canvas | Deliverable |
+| Mode | Sizing logic | Deliverable |
 | --- | --- | --- |
-| Top–bottom | 3:4 | source photograph above, humanist geometry below, exact equal height |
-| Left–right | 3:2 | source photograph left, humanist geometry right, exact equal width |
-| Design only | 3:4 | source used as evidence but absent from the final canvas |
+| Top–bottom | source-adaptive | source photograph above, humanist geometry below, each panel retains the complete source size; exact equal height |
+| Left–right | source-adaptive | source photograph left, humanist geometry right, each panel retains the complete source size; exact equal width |
+| Design only | source-adaptive | source used as evidence but absent from the final canvas; retains the source ratio and dimensions |
 | Wallpaper pack | device-specific | four separate PNGs for phone, iPad, desktop, and children's watch |
 
-Exact user-supplied pixels override the default ratios. Top–bottom needs an even total height; left–right needs an even total width. The skill never silently changes an exact requested size.
+Exact user-supplied pixels take priority; otherwise ordinary modes adapt to the source instead of imposing stock ratios. Top–bottom needs an even user-specified total height; left–right needs an even user-specified total width. The skill never silently changes an exact requested size.
+
+Wallpaper-pack also has no silent size default: choose the common device preset—phone `1440×3200`, iPad `2048×2732`, desktop `3840×2160`, watch `1024×1024`—or provide labeled custom resolutions.
 
 A wallpaper pack supports two relationships:
 
@@ -79,13 +81,13 @@ Linked does not mean cropped. All four wallpapers are generated, composed, and r
 
 ## Copy is not a label added afterwards
 
-026 includes copy by default: one main title and two to four microtext groups. Wording is distilled from visible fact, relational tension, and grounded implication, then tested against an unrelated-image swap. If the same line still works on an unrelated photograph, it must be rewritten.
+Before generation, 026 asks for automatic copy, custom copy, or text-free output. Automatic copy uses one main title and two to four microtext groups, distilled from visible fact, relational tension, and grounded implication, then tested against an unrelated-image swap.
 
-Finished user copy stays verbatim. A direction or editable draft is refined only within the permission given. Text disappears only when the user explicitly requests a text-free result.
+In custom-copy mode, the user may supply an exact main title and optional microtext; finished wording stays verbatim. A direction or editable draft is refined only within the permission given. Text-free mode removes all text.
 
 Copy language follows the intended audience rather than any guess based on appearance:
 
-**target market or audience locale > specified output language > direction language > request language**
+**target market or audience locale > specified output language > direction language; if none is explicit, ask before generation**
 
 A Japanese edition uses natural Japanese, a Korean edition natural Korean, and a UK edition British English. Every locale is transcreated natively rather than translated literally or decorated with pseudo-foreign text.
 
@@ -171,4 +173,21 @@ Choose either activation route:
 
 **Let quietness come from the photograph, not the template.**
 
+</div>
+
+---
+
+<div align="center">
+  <h2>☕ Support this open-source project</h2>
+  <p>If this project saved you time, a Star, a share, or a coffee helps keep it moving.</p>
+  <table>
+    <tr>
+      <td align="center" width="240">
+        <a href="https://github.com/nevertoday/zhongguo-traditional-colors/blob/main/docs/images/buy-me-a-coffee-qr.png?raw=true"><img src="https://github.com/nevertoday/zhongguo-traditional-colors/blob/main/docs/images/buy-me-a-coffee-qr.png?raw=true" alt="Support Xiaoxiaodong through Buy Me a Coffee" width="180"></a><br>
+        <strong>Buy me a coffee</strong><br>
+        <sub>Scan or open the QR code to support Xiaoxiaodong</sub>
+      </td>
+    </tr>
+  </table>
+  <p><sub>Support is entirely optional and never changes access to this open-source project.</sub></p>
 </div>

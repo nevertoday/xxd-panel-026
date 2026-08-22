@@ -1,4 +1,4 @@
 interface:
   display_name: "xxd-panel-026"
   short_description: "Create quiet humanist geometry panels, solo art, or wallpaper packs."
-  default_prompt: "Use $xxd-panel-026 to ask me for top-bottom, left-right, design-only, or four-device wallpaper-pack mode, then transform each supplied photo into soft humanist geometry with subtle paper relief."
+  default_prompt: "Use $xxd-panel-026 to ask for the output mode and copy/language preference, preserve source-adaptive dimensions unless I specify a size, then transform each supplied photo into soft humanist geometry with subtle paper relief."

@@ -9,7 +9,7 @@ Supported layouts:
 
 Examples:
 
-    compose_panel.py --plan --layout top-bottom --canvas 3:4
+    compose_panel.py --plan --layout top-bottom --source photo.jpg
     compose_panel.py --plan --layout left-right --size 2560x1440
     compose_panel.py --source photo.jpg --design panel.png --out poster.png \
         --layout left-right --size 2560x1440 --anchor center
@@ -37,13 +37,6 @@ except ModuleNotFoundError:
         "  Try:  /opt/homebrew/bin/python3 compose_panel.py ...\n"
         "  Or:   python3 -m pip install Pillow"
     )
-
-
-LAYOUT_DEFAULT_RATIOS = {
-    "top-bottom": "3:4",
-    "left-right": "3:2",
-    "design-only": "3:4",
-}
 
 
 def parse_ratio(text: str) -> tuple[float, float]:
@@ -77,17 +70,33 @@ def parse_size(text: str) -> tuple[int, int]:
 
 def canvas_size(
     layout: str,
-    ratio: tuple[float, float],
-    width: int,
+    ratio: tuple[float, float] | None,
+    width: int | None,
     exact_size: tuple[int, int] | None,
+    source_size: tuple[int, int] | None,
 ) -> tuple[int, int]:
-    """Resolve the final canvas and preserve exact equal halves when needed."""
+    """Resolve an explicit canvas or adapt it losslessly to the source."""
     if exact_size is not None:
         cw, ch = exact_size
-    else:
+    elif ratio is not None:
+        if width is None:
+            raise ValueError("a width or readable --source is required with --canvas")
         wr, hr = ratio
         cw = width
         ch = round(width * hr / wr)
+    elif source_size is not None:
+        sw, sh = source_size
+        if layout == "top-bottom":
+            cw, ch = sw, sh * 2
+        elif layout == "left-right":
+            cw, ch = sw * 2, sh
+        else:
+            cw, ch = sw, sh
+    else:
+        raise ValueError(
+            "no default ratio is imposed; provide --source for source-adaptive sizing, "
+            "or specify --size/--canvas"
+        )
 
     if layout == "top-bottom" and ch % 2:
         if exact_size is not None:
@@ -101,7 +110,8 @@ def canvas_size(
                 f"left-right requires an even output width for exact 50/50, got {cw}x{ch}"
             )
         cw += 1
-        ch = round(cw * ratio[1] / ratio[0])
+        if ratio is not None:
+            ch = round(cw * ratio[1] / ratio[0])
 
     return cw, ch
 
@@ -305,10 +315,14 @@ def main(argv: list[str] | None = None) -> int:
     p.add_argument("--out", type=Path, help="output image")
     p.add_argument(
         "--canvas",
-        help="canvas ratio; defaults to 3:4 for top-bottom/design-only and 3:2 for left-right",
+        help="explicit canvas ratio; when omitted, infer a lossless layout from --source",
     )
     p.add_argument("--size", type=parse_size, help="exact output pixels, e.g. 2560x1440")
-    p.add_argument("--width", type=int, default=1440, help="width used with --canvas (default 1440)")
+    p.add_argument(
+        "--width",
+        type=int,
+        help="width used with --canvas; defaults to source width when available",
+    )
     p.add_argument(
         "--anchor",
         choices=("top", "center", "bottom", "left", "right"),
@@ -319,16 +333,30 @@ def main(argv: list[str] | None = None) -> int:
     p.add_argument("--audit", type=Path, help="audit seam and optional requested size")
     args = p.parse_args(argv)
 
-    if args.width < 2:
+    if args.width is not None and args.width < 2:
         sys.exit("--width must be at least 2")
 
-    ratio_text = args.canvas or LAYOUT_DEFAULT_RATIOS[args.layout]
-    ratio = parse_ratio(ratio_text)
+    if args.audit and args.size is None and args.canvas is None and args.source is None:
+        audit(args.audit, args.layout, None)
+        return 0
+
+    source_for_sizing = load(args.source) if args.source is not None else None
+    source_size = source_for_sizing.size if source_for_sizing is not None else None
+    ratio_text = args.canvas
+    ratio = parse_ratio(ratio_text) if ratio_text else None
+    working_width = args.width
+    if ratio is not None and working_width is None:
+        working_width = source_size[0] if source_size is not None else None
     try:
-        canvas = canvas_size(args.layout, ratio, args.width, args.size)
+        canvas = canvas_size(args.layout, ratio, working_width, args.size, source_size)
     except ValueError as exc:
         sys.exit(str(exc))
-    ratio_label = f"exact {canvas[0]}x{canvas[1]}" if args.size else ratio_text
+    if args.size:
+        ratio_label = f"exact {canvas[0]}x{canvas[1]}"
+    elif ratio_text:
+        ratio_label = ratio_text
+    else:
+        ratio_label = f"source-adaptive from {source_size[0]}x{source_size[1]}"
 
     if args.audit:
         audit(args.audit, args.layout, canvas if args.size else None)
@@ -346,13 +374,33 @@ def main(argv: list[str] | None = None) -> int:
     cw, ch = canvas
     pw, ph = panel_size(args.layout, canvas)
     design_src = load(args.design)
+    adaptive = args.size is None and args.canvas is None
+
+    if adaptive and design_src.size != (pw, ph):
+        source_aspect = pw / ph
+        design_aspect = design_src.width / design_src.height
+        if abs(source_aspect - design_aspect) / source_aspect > 0.005:
+            sys.exit(
+                f"source-adaptive mode requires design aspect {pw}:{ph}, got "
+                f"{design_src.width}:{design_src.height}; regenerate without stock-ratio cropping"
+            )
+        print(
+            f"adaptive design resize {design_src.width}x{design_src.height} -> {pw}x{ph} "
+            "(same aspect, no crop)"
+        )
+
+    adaptive_design = (
+        design_src.copy()
+        if design_src.size == (pw, ph)
+        else design_src.resize((pw, ph), Image.LANCZOS)
+    )
 
     if args.layout == "design-only":
         print(f"layout design-only, canvas {cw}x{ch}, no seam")
         print(overflow_report(design_src, (cw, ch), "design"))
-        result = cover(design_src, (cw, ch), "center")
+        result = adaptive_design if adaptive else cover(design_src, (cw, ch), "center")
     else:
-        source_src = load(args.source)
+        source_src = source_for_sizing or load(args.source)
         axis = "y" if args.layout == "top-bottom" else "x"
         seam = ph if args.layout == "top-bottom" else pw
         print(
@@ -362,8 +410,8 @@ def main(argv: list[str] | None = None) -> int:
         print(overflow_report(source_src, (pw, ph), "source"))
         print(overflow_report(design_src, (pw, ph), "design"))
         result = Image.new("RGB", (cw, ch))
-        source_panel = cover(source_src, (pw, ph), args.anchor)
-        design_panel = cover(design_src, (pw, ph), "center")
+        source_panel = source_src.copy() if adaptive else cover(source_src, (pw, ph), args.anchor)
+        design_panel = adaptive_design if adaptive else cover(design_src, (pw, ph), "center")
         if args.layout == "top-bottom":
             result.paste(source_panel, (0, 0))
             result.paste(design_panel, (0, ph))
