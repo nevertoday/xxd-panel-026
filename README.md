@@ -193,12 +193,12 @@ XXD 是小小东的品牌名缩写。本项目由 [@xiaoxiaodong01](https://x.co
   <table>
     <tr>
       <td align="center" width="240">
-        <a href="https://github.com/nevertoday/MediaCrawler/blob/main/static/images/wechat_pay.jpeg?raw=true"><img src="https://github.com/nevertoday/MediaCrawler/blob/main/static/images/wechat_pay.jpeg?raw=true" alt="XXD 算力赞助微信支付收款码" height="220"></a><br>
-        <strong>微信支付</strong><br>
+        <a href="https://colors.xiaoxiaodong.ai/docs/images/wechat-reward-qr.png"><img src="https://colors.xiaoxiaodong.ai/docs/images/wechat-reward-qr.png" alt="XXD 算力赞助微信收款码" height="220"></a><br>
+        <strong>微信</strong><br>
         <sub>扫描二维码赞助算力</sub>
       </td>
       <td align="center" width="240">
-        <a href="https://github.com/nevertoday/MediaCrawler/blob/main/static/images/zfb_pay.jpeg?raw=true"><img src="https://github.com/nevertoday/MediaCrawler/blob/main/static/images/zfb_pay.jpeg?raw=true" alt="XXD 算力赞助支付宝收款码" height="220"></a><br>
+        <a href="https://colors.xiaoxiaodong.ai/docs/images/alipay-reward-qr.png"><img src="https://colors.xiaoxiaodong.ai/docs/images/alipay-reward-qr.png" alt="XXD 算力赞助支付宝收款码" height="220"></a><br>
         <strong>支付宝</strong><br>
         <sub>扫描二维码赞助算力</sub>
       </td>
