@@ -156,13 +156,13 @@ XXD 是小小东的品牌名缩写。本项目由 [@xiaoxiaodong01](https://x.co
 
 ## 支持与会员权益
 
-### Skills 答疑｜199 元/小时
+### 深度咨询｜299 元/小时
 
-按小时提供一对一 Skills 使用答疑，每小时 199 元。如需预约或咨询，请扫描下方微信二维码联系小小东。
+按小时提供一对一 Skills 深度咨询，每小时 299 元。如需预约，请扫描下方微信二维码联系小小东。
 
 ### 小小东 Skills 用户交流群｜入群 99 元
 
-一次付费加入用户交流群，用于 Skills 使用经验分享、作品交流与成员互助；不包含按小时的一对一 Skills 答疑。入群请扫描下方微信二维码，备注「Skills 用户群」。
+一次付费加入用户交流群，用于 Skills 使用经验分享、作品交流与成员互助；不包含按小时的一对一深度咨询。入群请扫描下方微信二维码，备注「Skills 用户群」。
 
 ### 知识星球＋成员提示词库｜699 元/年
 
@@ -186,16 +186,21 @@ XXD 是小小东的品牌名缩写。本项目由 [@xiaoxiaodong01](https://x.co
 ---
 
 <div align="center">
-  <h2>☕ 支持这个开源项目</h2>
-  <p>如果这个项目为你节省了时间，欢迎点亮 Star、分享给朋友，或请小小东喝杯咖啡。</p>
+  <h2>⚡ 算力赞助</h2>
+  <p>如果这个项目为你节省了时间，欢迎点亮 Star、分享给朋友，或自愿赞助项目算力。</p>
   <table>
     <tr>
       <td align="center" width="240">
-        <a href="https://xiaoxiaodong.pages.dev/assets/wechat-qr.png"><img src="https://xiaoxiaodong.pages.dev/assets/wechat-qr.png" alt="联系小小东赞赏项目" width="180"></a><br>
-        <strong>中国用户赞赏</strong><br>
-        <sub>扫码添加微信，备注「赞赏」</sub>
+        <a href="https://github.com/nevertoday/MediaCrawler/blob/main/static/images/wechat_pay.jpeg?raw=true"><img src="https://github.com/nevertoday/MediaCrawler/blob/main/static/images/wechat_pay.jpeg?raw=true" alt="XXD 算力赞助微信支付收款码" height="220"></a><br>
+        <strong>微信支付</strong><br>
+        <sub>扫描二维码赞助算力</sub>
+      </td>
+      <td align="center" width="240">
+        <a href="https://github.com/nevertoday/MediaCrawler/blob/main/static/images/zfb_pay.jpeg?raw=true"><img src="https://github.com/nevertoday/MediaCrawler/blob/main/static/images/zfb_pay.jpeg?raw=true" alt="XXD 算力赞助支付宝收款码" height="220"></a><br>
+        <strong>支付宝</strong><br>
+        <sub>扫描二维码赞助算力</sub>
       </td>
     </tr>
   </table>
-  <p><sub>赞赏完全自愿，不影响项目的免费使用。</sub></p>
+  <p><sub>算力赞助完全自愿，用于支持生成测试与项目持续维护，不影响项目的免费使用。</sub></p>
 </div>
