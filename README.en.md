@@ -12,7 +12,7 @@
 [![Four Modes](https://img.shields.io/badge/Modes-4-a76f62?style=flat-square)](#four-outputs-one-humanist-geometry)
 [![Raster Output](https://img.shields.io/badge/Output-PNG-65766d?style=flat-square)](#boundaries-and-trust)
 
-<a href="README.md">简体中文</a> · <strong>English</strong> · <a href="README.ja.md">日本語</a>
+<a href="README.md">简体中文</a> · <strong>English</strong> · <a href="README.ja.md">日本語</a> · <a href="README.ar.md">العربية</a>
 
 </div>
 
@@ -89,7 +89,7 @@ Copy language follows the intended audience rather than any guess based on appea
 
 **target market or audience locale > specified output language > direction language; if none is explicit, ask before generation**
 
-A Japanese edition uses natural Japanese, a Korean edition natural Korean, and a UK edition British English. Every locale is transcreated natively rather than translated literally or decorated with pseudo-foreign text.
+A Japanese edition uses natural Japanese, a Korean edition natural Korean, a UK edition British English, and an Arabic edition natural Modern Standard Arabic with correct shaping and right-to-left composition. Every locale is transcreated natively rather than translated literally or decorated with pseudo-foreign text.
 
 ## Get started
 
@@ -132,7 +132,7 @@ Local composition needs Python 3 and Pillow. The safe bitmap bridge uses Python 
 ```text
 xxd-panel-026/
 ├── SKILL.md
-├── README.md / README.en.md / README.ja.md
+├── README.md / README.en.md / README.ja.md / README.ar.md
 ├── agents/openai.yaml
 ├── assets/
 │   ├── banner.svg

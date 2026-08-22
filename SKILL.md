@@ -18,7 +18,7 @@ Turn every supplied photograph into finished editorial artwork. The selected mod
 - The transformed region is a photo-derived minimal humanist geometric construction: recognizable subject evidence, flat restrained shapes, fine contour or structural lines, generous quiet space, and only a whisper of pressed-paper relief. It is not a trace, realistic illustration, generic pastel wallpaper, or unrelated abstraction.
 - Use a restrained 4–6 color palette derived from the source photo and translated toward warm white, sand, pale ochre, dusty pink, mist blue, sage, or nearby low-stimulation hues. These are roles, not a fixed palette.
 - Copy has no silent default. Before generation, resolve one explicit choice: source-derived automatic copy, user-supplied exact copy, or text-free output. Automatic or direction-led copy contains one main title and 2–4 microtext groups. Custom copy requires an exact main title; user microtext is optional, and supporting microtext may be professionally derived unless the user explicitly requests title-only.
-- Resolve copy locale independently from the language used to issue the command. Use this priority for automatic or direction-led copy: explicit target market/audience locale > explicit output language > language of the supplied direction; if none is explicit, ask before generation. Never infer audience language, nationality, or ethnicity from a face, name, clothing, scenery, filename, metadata, or visible signage. Localize by transcreation—native wording, register, rhetoric, punctuation, and line breaking—not literal translation or foreign-looking pseudo-text. Preserve exact finished copy verbatim unless the user explicitly asks to translate/localize it; if exact wording conflicts with an explicitly named target locale and permission is unclear, ask one concise clarification before generation. Do not invent a year; retain one only when explicitly supplied or requested.
+- Resolve copy locale independently from the language used to issue the command. Use this priority for automatic or direction-led copy: explicit target market/audience locale > explicit output language > language of the supplied direction; if none is explicit, ask before generation. Never infer audience language, nationality, or ethnicity from a face, name, clothing, scenery, filename, metadata, or visible signage. Localize by transcreation—native wording, register, rhetoric, punctuation, and line breaking—not literal translation or foreign-looking pseudo-text. Arabic output uses natural Modern Standard Arabic unless the user names a regional variety; preserve connected letterforms, right-to-left reading order, Arabic punctuation, semantic line breaks, and deliberate handling of embedded Latin text or numerals. Do not mirror the artwork indiscriminately: reverse text flow and typographic alignment while keeping source-derived subject direction and composition intentional. Preserve exact finished copy verbatim unless the user explicitly asks to translate/localize it; if exact wording conflicts with an explicitly named target locale and permission is unclear, ask one concise clarification before generation. Do not invent a year; retain one only when explicitly supplied or requested.
 - Render no logo, watermark, signature, color swatch, UI chrome, mockup frame, or unrelated explanatory prose.
 
 ## Aesthetic motive lock
@@ -103,7 +103,7 @@ Do not downgrade a new generation request into validation of an old artifact. If
       请直接输入主标题、可选微型文字，并注明语言或地区
    3. 无文字
 
-   示例：1｜日语（日本）
+   示例：1｜阿拉伯语（现代标准阿拉伯语）
    示例：2｜英式英语｜主标题：STAY CLOSE｜微型文字：...
    ```
 
@@ -188,7 +188,7 @@ Then append the locked copy package:
 ```text
 COPY MODE: REQUIRED
 COPY ORIGIN: USER_EXACT | USER_DIRECTION | SOURCE_DERIVED
-COPY LOCALE: <resolved locale, such as ja-JP | ko-KR | en-GB | zh-CN>
+COPY LOCALE: <resolved locale, such as ar | ja-JP | ko-KR | en-GB | zh-CN>
 COPY INTENT — INSTRUCTION ONLY, NEVER RENDER: <one concise semantic core and intended emotional turn>
 MAIN TITLE: <locked exact string>
 MICROTEXT 1: <locked exact string>
@@ -230,7 +230,7 @@ Before accepting each result, verify all of the following:
 - `top-bottom` has a clean horizontal seam at exactly half height; `left-right` has a clean vertical seam at exactly half width; `design-only` and all wallpaper files contain no seam or visible source photo.
 - In paired modes, the photographic panel remains recognizably the original source, appears in the correct upper/left position, and contains no deformation or typography.
 - The transformed region depicts the same key subject and relationship through simplified silhouette, gentle geometric planes, fine contour/structural lines, and source-specific spacing.
-- Automatic or direction-led copy expresses a visible fact plus a grounded relational or latent meaning, passes the unrelated-photo swap test, and earns its emotional turn without a forced pun or invented backstory. Its language matches the resolved target locale rather than the command language or presumed identity: Japanese reads as native Japanese, Korean as native Korean, and UK English uses British conventions. Exact user copy remains verbatim and its hierarchy, script shaping, punctuation, line breaks, and placement preserve the intended emphasis; editable user direction is transcreated only within the permission given.
+- Automatic or direction-led copy expresses a visible fact plus a grounded relational or latent meaning, passes the unrelated-photo swap test, and earns its emotional turn without a forced pun or invented backstory. Its language matches the resolved target locale rather than the command language or presumed identity: Arabic reads as native Arabic with connected shaping and RTL composition, Japanese as native Japanese, Korean as native Korean, and UK English uses British conventions. Exact user copy remains verbatim and its hierarchy, script shaping, punctuation, line breaks, and placement preserve the intended emphasis; editable user direction is transcreated only within the permission given.
 - The transformed construction feels balanced, quiet, and human rather than rigidly symmetric: one clear core, generous negative space, measured density, slight offsets, and only shallow pressed-paper or low-relief depth.
 - The palette contains 4–6 source-derived low-stimulation colors translated toward warm white, sand, dusty pink, pale ochre, mist blue, sage, or adjacent hues; it avoids neon, dirty grey distortion, cold tech color, complex gradients, and cheap commercial styling.
 - In automatic or direction-led copy mode, the transformed design contains the locked main title and all 2–4 locked microtext strings. In custom-copy mode, it contains the exact title plus every populated or derived microtext string, or the exact title alone when title-only was explicitly requested. All rendered wording is accurate, with no substitution, misspelling, gibberish, extra wording, or invented year; the main title is visually unmistakable and at least three times the microtext scale. In text-free mode, no letters, numbers, captions, or pseudo-text appear anywhere.

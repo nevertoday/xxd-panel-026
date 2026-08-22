@@ -12,7 +12,7 @@
 [![Four Modes](https://img.shields.io/badge/Modes-4-a76f62?style=flat-square)](#四种输出共享同一种人文几何)
 [![Raster Output](https://img.shields.io/badge/Output-PNG-65766d?style=flat-square)](#边界与信任)
 
-<strong>简体中文</strong> · <a href="README.en.md">English</a> · <a href="README.ja.md">日本語</a>
+<strong>简体中文</strong> · <a href="README.en.md">English</a> · <a href="README.ja.md">日本語</a> · <a href="README.ar.md">العربية</a>
 
 </div>
 
@@ -89,7 +89,7 @@ XXD Panel 026 是一个面向 Codex 与兼容 Agent 的图像生成 Skill。它�
 
 **目标市场／受众地区 > 指定成品语言 > 方向语言；以上均未明确时，生图前询问**
 
-日本版使用自然日语，韩国版使用自然韩语，英国版使用英式英语。所有地区都做母语转创，而不是机械翻译或伪外文装饰。
+日本版使用自然日语，韩国版使用自然韩语，英国版使用英式英语，阿拉伯语版使用自然的现代标准阿拉伯语与从右到左排版。所有地区都做母语转创，而不是机械翻译或伪外文装饰。
 
 ## 开始使用
 
@@ -136,7 +136,7 @@ $xxd-panel-026
 ```text
 xxd-panel-026/
 ├── SKILL.md
-├── README.md / README.en.md / README.ja.md
+├── README.md / README.en.md / README.ja.md / README.ar.md
 ├── agents/openai.yaml
 ├── assets/
 │   ├── banner.svg
