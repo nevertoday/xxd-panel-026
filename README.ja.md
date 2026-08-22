@@ -44,20 +44,22 @@ XXD Panel 026 は、Codex と互換 Agent のための画像生成 Skill です�
 
 色はアイボリー、暖白、淡いグレー、砂色、くすんだピンク、淡い黄土、霧がかった青、セージグリーンへ寄せることがあります。ただし、これは固定パレットではありません。主色、補助色、構造色は、必ずその写真の光、素材、空気から説明できる必要があります。
 
-## 作例
+## 作例 · X より
 
-作例は現在制作中です。以下の4枠は、後から `assets/examples/` の完成作品へそのまま差し替えられます。
+> [Xiaoxiaodong（@xiaoxiaodong01）](https://x.com/xiaoxiaodong01/status/2090433161096581434) · 2026年8月20日<br>
+> GPT2 × レリーフ × クロップ × 静けさ × 美学プロンプト × VOL.026<br>
+> 写真を描き直すのではなく、面白さの核を拾い、数本の線と色面まで静かに削ぎ落としても、一目で元の場面だと分かる表現です。
 
 <table>
   <tr>
-    <td align="center" width="50%"><strong>上下二分割</strong><br><br><em>作例制作中</em><br><br></td>
-    <td align="center" width="50%"><strong>左右二分割</strong><br><br><em>作例制作中</em><br><br></td>
-  </tr>
-  <tr>
-    <td align="center"><strong>デザインのみ</strong><br><br><em>作例制作中</em><br><br></td>
-    <td align="center"><strong>4端末向け壁紙セット</strong><br><br><em>作例制作中</em><br><br></td>
+    <td width="50%"><a href="https://x.com/xiaoxiaodong01/status/2090433161096581434"><img src="https://pbs.twimg.com/media/HQK0forakAEWQKs.jpg?format=jpg&amp;name=large" alt="XXD Panel 026 作例 1"></a></td>
+    <td width="50%"><a href="https://x.com/xiaoxiaodong01/status/2090433161096581434"><img src="https://pbs.twimg.com/media/HQK1hWDbMAA3nqE.jpg?format=jpg&amp;name=large" alt="XXD Panel 026 作例 2"></a></td>
   </tr>
 </table>
+
+<p align="center"><a href="https://x.com/xiaoxiaodong01/status/2090433161096581434">元の投稿と完全なプロンプトを見る →</a></p>
+
+これらは 026 の美学的動機を示す作例です。投稿当時の画面比率を現在の既定値にはしません。4つのモードは、以下の元画像適応・カスタムサイズ方針に従います。
 
 ## 4つの出力を支えるひとつのヒューマニスト幾何学
 

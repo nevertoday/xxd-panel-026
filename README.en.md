@@ -44,20 +44,22 @@ The subject remains the sole visual core. The composition tends towards the cent
 
 Colours may move towards ivory, warm white, pale grey, sand, dusty pink, pale ochre, mist blue, or sage. These are directions, not presets. The principal, supporting, and structural colours must remain explainable through the current photograph's light, material, or atmosphere.
 
-## Samples
+## Samples · from X
 
-Samples are in production. The four mode slots below are ready to be replaced with finished work from `assets/examples/`.
+> [Xiaoxiaodong (@xiaoxiaodong01)](https://x.com/xiaoxiaodong01/status/2090433161096581434) · 20 August 2026<br>
+> GPT2 × relief × crop × restraint × aesthetic prompt × VOL.026<br>
+> It does not redraw the photograph. It finds what matters, reduces the scene to a few lines and colour planes, and still remains immediately recognisable.
 
 <table>
   <tr>
-    <td align="center" width="50%"><strong>Top–bottom</strong><br><br><em>Sample in production</em><br><br></td>
-    <td align="center" width="50%"><strong>Left–right</strong><br><br><em>Sample in production</em><br><br></td>
-  </tr>
-  <tr>
-    <td align="center"><strong>Design only</strong><br><br><em>Sample in production</em><br><br></td>
-    <td align="center"><strong>Four-device wallpaper pack</strong><br><br><em>Sample in production</em><br><br></td>
+    <td width="50%"><a href="https://x.com/xiaoxiaodong01/status/2090433161096581434"><img src="https://pbs.twimg.com/media/HQK0forakAEWQKs.jpg?format=jpg&amp;name=large" alt="XXD Panel 026 sample 1"></a></td>
+    <td width="50%"><a href="https://x.com/xiaoxiaodong01/status/2090433161096581434"><img src="https://pbs.twimg.com/media/HQK1hWDbMAA3nqE.jpg?format=jpg&amp;name=large" alt="XXD Panel 026 sample 2"></a></td>
   </tr>
 </table>
+
+<p align="center"><a href="https://x.com/xiaoxiaodong01/status/2090433161096581434">View the original post and full prompt →</a></p>
+
+These samples demonstrate the 026 aesthetic motive; they do not turn the post's earlier canvas into a current default. The four modes still follow the source-adaptive and custom sizing logic below.
 
 ## Four outputs, one humanist geometry
 

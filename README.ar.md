@@ -46,20 +46,22 @@ XXD Panel 026 هي مهارة لتوليد الصور مخصّصة لـ Codex و
 
 قد تتجه الألوان نحو العاجي والأبيض الدافئ والرمادي الفاتح والرمل والوردي المغبر والمغرة الخفيفة والأزرق الضبابي والأخضر المريمي. هذه اتجاهات لا وصفات ثابتة. ويجب أن يبقى اللون الرئيسي والمساند والبنيوي قابلاً للتفسير من ضوء الصورة الحالية أو مادتها أو أجوائها.
 
-## النماذج
+## نماذج · من X
 
-النماذج قيد الإنتاج. المواضع الأربعة التالية جاهزة لاستبدالها بأعمال نهائية من `assets/examples/`.
+> [Xiaoxiaodong (@xiaoxiaodong01)](https://x.com/xiaoxiaodong01/status/2090433161096581434) · 20 أغسطس 2026<br>
+> GPT2 × بروز × قصّ × هدوء × توجيه جمالي × VOL.026<br>
+> لا تعيد رسم الصورة، بل تلتقط ما يهم فيها وتختزل المشهد بهدوء إلى بضعة خطوط ومساحات لونية، مع بقائه قابلاً للتعرّف من النظرة الأولى.
 
 <table>
   <tr>
-    <td align="center" width="50%"><strong>أعلى وأسفل</strong><br><br><em>النموذج قيد الإنتاج</em><br><br></td>
-    <td align="center" width="50%"><strong>يمين ويسار</strong><br><br><em>النموذج قيد الإنتاج</em><br><br></td>
-  </tr>
-  <tr>
-    <td align="center"><strong>التصميم فقط</strong><br><br><em>النموذج قيد الإنتاج</em><br><br></td>
-    <td align="center"><strong>حزمة خلفيات لأربعة أجهزة</strong><br><br><em>النموذج قيد الإنتاج</em><br><br></td>
+    <td width="50%"><a href="https://x.com/xiaoxiaodong01/status/2090433161096581434"><img src="https://pbs.twimg.com/media/HQK0forakAEWQKs.jpg?format=jpg&amp;name=large" alt="نموذج XXD Panel 026 رقم 1"></a></td>
+    <td width="50%"><a href="https://x.com/xiaoxiaodong01/status/2090433161096581434"><img src="https://pbs.twimg.com/media/HQK1hWDbMAA3nqE.jpg?format=jpg&amp;name=large" alt="نموذج XXD Panel 026 رقم 2"></a></td>
   </tr>
 </table>
+
+<p align="center"><a href="https://x.com/xiaoxiaodong01/status/2090433161096581434">عرض المنشور الأصلي والتوجيه كاملاً ←</a></p>
+
+توضح هذه النماذج الدافع الجمالي لـ 026، ولا تجعل مقاس المنشور السابق قيمة افتراضية حالية. وتظل الأنماط الأربعة خاضعة لمنطق التكيّف مع المصدر والمقاسات المخصّصة أدناه.
 
 ## أربعة مخرجات، وهندسة إنسانية واحدة
 

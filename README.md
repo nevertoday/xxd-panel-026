@@ -44,20 +44,22 @@ XXD Panel 026 是一个面向 Codex 与兼容 Agent 的图像生成 Skill。它�
 
 色彩可能靠近米白、暖白、浅灰、沙色、灰粉、浅赭、雾蓝或鼠尾草绿，但这些只是转译方向。真正的主色、辅助色和结构色必须能从当前照片的光线、材质或气氛中解释。
 
-## 样张
+## 样张 · 来自 X
 
-样张正在制作中。以下区域已经为四种模式预留，后续可直接替换为 `assets/examples/` 中的正式作品。
+> [小小东（@xiaoxiaodong01）](https://x.com/xiaoxiaodong01/status/2090433161096581434) · 2026 年 8 月 20 日<br>
+> GPT2 × 浮雕 × 裁剪 × 冷静 × 美学提示词 × VOL.026<br>
+> 它不是把照片再画一遍，而是抓住最有意思的部分重新表达：慢慢减到几根线和几个色块，仍然一眼能够认出。
 
 <table>
   <tr>
-    <td align="center" width="50%"><strong>上下双联</strong><br><br><em>样张制作中</em><br><br></td>
-    <td align="center" width="50%"><strong>左右双联</strong><br><br><em>样张制作中</em><br><br></td>
-  </tr>
-  <tr>
-    <td align="center"><strong>纯设计版</strong><br><br><em>样张制作中</em><br><br></td>
-    <td align="center"><strong>四端壁纸套装</strong><br><br><em>样张制作中</em><br><br></td>
+    <td width="50%"><a href="https://x.com/xiaoxiaodong01/status/2090433161096581434"><img src="https://pbs.twimg.com/media/HQK0forakAEWQKs.jpg?format=jpg&amp;name=large" alt="XXD Panel 026 样张 1"></a></td>
+    <td width="50%"><a href="https://x.com/xiaoxiaodong01/status/2090433161096581434"><img src="https://pbs.twimg.com/media/HQK1hWDbMAA3nqE.jpg?format=jpg&amp;name=large" alt="XXD Panel 026 样张 2"></a></td>
   </tr>
 </table>
+
+<p align="center"><a href="https://x.com/xiaoxiaodong01/status/2090433161096581434">查看原推文与完整提示词 →</a></p>
+
+这些样张用于展示 026 的美学动机，不会把推文中的旧画幅写成当前 Skill 的默认尺寸；当前四种模式仍遵循下方的源图自适应与自定义尺寸逻辑。
 
 ## 四种输出共享同一种人文几何
 
