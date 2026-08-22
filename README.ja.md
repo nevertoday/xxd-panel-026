@@ -152,9 +152,13 @@ XXD は Xiaoxiaodong のブランド名を略したものです。このプロ�
 
 ## サポートと会員特典
 
-### Skills Q&A｜CNY 99
+### Skills Q&A｜CNY 199／時間
 
-この料金は Skills の利用に関する Q&A サポート向けです。購入またはお問い合わせは、以下の WeChat QR コードから Xiaoxiaodong へご連絡ください。
+Skills の利用に関する 1 対 1 の Q&A サポートは、1 時間あたり CNY 199 です。予約またはお問い合わせは、以下の WeChat QR コードから Xiaoxiaodong へご連絡ください。
+
+### Xiaoxiaodong Skills ユーザー交流グループ｜参加費 CNY 99
+
+一度の支払いで、使い方や制作事例の共有、メンバー同士の情報交換を行うユーザーグループに参加できます。時間制の 1 対 1 Skills Q&A は含まれません。以下の WeChat QR コードから「Skills ユーザーグループ」と添えてご連絡ください。
 
 ### 知识星球＋会員向けプロンプトライブラリ｜年額 CNY 699
 

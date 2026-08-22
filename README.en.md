@@ -152,9 +152,13 @@ XXD is the abbreviated brand name of Xiaoxiaodong. This project is created and m
 
 ## Support and Membership
 
-### Skills Q&A · CNY 99
+### Skills Q&A · CNY 199/hour
 
-This fee covers Q&A support for using the Skills. To purchase or ask a question, contact Xiaoxiaodong through the WeChat QR code below.
+One-to-one Q&A support for using the Skills is billed at CNY 199 per hour. To book a session or ask a question, contact Xiaoxiaodong through the WeChat QR code below.
+
+### Xiaoxiaodong Skills User Community · CNY 99 to join
+
+A one-time CNY 99 fee joins the user community for sharing workflows, discussing work, and peer support. It does not include hourly one-to-one Skills Q&A. Scan the WeChat QR code below and include “Skills User Community” in your message.
 
 ### Knowledge Planet + Member Prompt Library · CNY 699/year
 
