@@ -1,0 +1,89 @@
+<svg width="1200" height="400" viewBox="0 0 1200 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <title>XXD Panel 026</title>
+  <desc>Quiet humanist geometry, soft source-derived color, fine structural lines, and subtle pressed-paper relief.</desc>
+  <defs>
+    <linearGradient id="paper" x1="0" y1="0" x2="1200" y2="400" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F6F0E6"/>
+      <stop offset="0.55" stop-color="#EEE7DC"/>
+      <stop offset="1" stop-color="#E5DED4"/>
+    </linearGradient>
+    <pattern id="fiber" width="54" height="54" patternUnits="userSpaceOnUse">
+      <path d="M6 15L14 13M32 39L40 37M46 7L50 6M12 47L18 45" stroke="#6E756F" stroke-opacity="0.07" stroke-width="1"/>
+      <circle cx="24" cy="18" r="0.9" fill="#B68778" fill-opacity="0.09"/>
+      <circle cx="44" cy="29" r="0.8" fill="#698595" fill-opacity="0.08"/>
+    </pattern>
+    <filter id="relief" x="-30%" y="-30%" width="170%" height="180%" color-interpolation-filters="sRGB">
+      <feDropShadow dx="-3" dy="-3" stdDeviation="4" flood-color="#FFFFFF" flood-opacity="0.82"/>
+      <feDropShadow dx="5" dy="8" stdDeviation="8" flood-color="#83786B" flood-opacity="0.2"/>
+    </filter>
+    <filter id="soft" x="-30%" y="-30%" width="170%" height="180%" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="9" stdDeviation="12" flood-color="#7A6B5F" flood-opacity="0.14"/>
+    </filter>
+    <clipPath id="frame">
+      <rect width="1200" height="400" rx="30"/>
+    </clipPath>
+  </defs>
+
+  <g clip-path="url(#frame)">
+    <rect width="1200" height="400" fill="url(#paper)"/>
+    <rect width="1200" height="400" fill="url(#fiber)"/>
+    <circle cx="1116" cy="62" r="194" fill="#AEBDAA" fill-opacity="0.22"/>
+    <rect x="716" y="-30" width="184" height="480" rx="92" transform="rotate(12 716 -30)" fill="#CFA89B" fill-opacity="0.15"/>
+    <path d="M646 320C770 279 866 271 1002 293C1088 307 1142 300 1220 263" stroke="#879DA6" stroke-opacity="0.26" stroke-width="2"/>
+    <path d="M662 84H1138M662 336H1138" stroke="#686E69" stroke-opacity="0.12"/>
+  </g>
+
+  <rect x="22" y="22" width="1156" height="356" rx="22" stroke="#6A706B" stroke-opacity="0.22"/>
+
+  <g>
+    <rect x="72" y="62" width="202" height="34" rx="17" fill="#65766D"/>
+    <text x="92" y="84" fill="#F7F1E8" font-family="Arial" font-size="14" font-weight="800" letter-spacing="2">XXD / IMAGE SKILL</text>
+    <text x="70" y="164" fill="#313A37" font-family="Arial" font-size="65" font-weight="900" letter-spacing="-2">PANEL <tspan fill="#A76F62">026</tspan></text>
+    <text x="72" y="210" fill="#7B6670" font-family="Arial" font-size="25" font-weight="850" letter-spacing="1">QUIET HUMANIST GEOMETRY</text>
+    <text x="72" y="249" fill="#59615E" font-family="Arial" font-size="18" font-weight="600">Recognisable form. Gentle rhythm. Barely raised paper.</text>
+  </g>
+
+  <g filter="url(#soft)">
+    <rect x="72" y="292" width="156" height="44" rx="9" fill="#F5EEE4" stroke="#77817C" stroke-opacity="0.24"/>
+    <text x="91" y="320" fill="#4E5854" font-family="Menlo" font-size="14" font-weight="800">4–6 COLOURS</text>
+    <rect x="240" y="292" width="150" height="44" rx="9" fill="#CFA89B"/>
+    <text x="260" y="320" fill="#493F40" font-family="Menlo" font-size="14" font-weight="800">SOURCE-BOUND</text>
+    <rect x="402" y="292" width="144" height="44" rx="9" fill="#879DA6"/>
+    <text x="422" y="320" fill="#F5EEE4" font-family="Menlo" font-size="14" font-weight="800">4 MODES</text>
+  </g>
+
+  <g transform="translate(910 190)">
+    <g filter="url(#relief)">
+      <path d="M-96 94V-22C-96 -86 -51 -121 2 -121C57 -121 99 -83 99 -19V94H-96Z" fill="#EEE1D2"/>
+      <circle cx="-24" cy="-46" r="39" fill="#CDA68F"/>
+      <path d="M-80 68C-55 10 -16 -2 26 16C54 28 73 50 88 88L-80 68Z" fill="#9EAF9E"/>
+      <path d="M-54 86C-17 31 22 23 66 58L57 102H-45L-54 86Z" fill="#8199A5"/>
+      <path d="M-6 -8C17 8 34 31 42 61" stroke="#5A625E" stroke-width="3" stroke-linecap="round"/>
+      <path d="M-48 49C-14 54 17 51 55 37" stroke="#F6F0E6" stroke-width="3" stroke-linecap="round"/>
+    </g>
+    <path d="M-132 102H138M-121 -91H-63M73 -78H132" stroke="#6A706B" stroke-opacity="0.48" stroke-width="2"/>
+    <path d="M-121 -91V-51M132 -78V-38" stroke="#6A706B" stroke-opacity="0.48" stroke-width="2"/>
+    <circle cx="-112" cy="-106" r="5" fill="#A76F62"/>
+    <circle cx="122" cy="-93" r="5" fill="#879DA6"/>
+  </g>
+
+  <g transform="translate(704 292)">
+    <text x="0" y="-16" fill="#59615E" fill-opacity="0.68" font-family="Menlo" font-size="11" font-weight="800" letter-spacing="1.5">FOUR OUTPUT MODES</text>
+    <g filter="url(#soft)">
+      <rect width="72" height="52" rx="8" fill="#F6F0E6"/>
+      <rect x="10" y="8" width="52" height="16" rx="3" fill="#879DA6" fill-opacity="0.55"/>
+      <rect x="10" y="28" width="52" height="16" rx="3" fill="#CFA89B"/>
+      <rect x="84" width="72" height="52" rx="8" fill="#F6F0E6"/>
+      <rect x="94" y="8" width="24" height="36" rx="3" fill="#879DA6" fill-opacity="0.55"/>
+      <rect x="122" y="8" width="24" height="36" rx="3" fill="#9EAF9E"/>
+      <rect x="168" width="72" height="52" rx="8" fill="#CFA89B"/>
+      <path d="M184 35C194 14 212 11 226 28" stroke="#F6F0E6" stroke-width="4" stroke-linecap="round"/>
+      <circle cx="207" cy="23" r="7" fill="#879DA6"/>
+      <rect x="252" width="140" height="52" rx="8" fill="#65766D"/>
+      <rect x="264" y="9" width="19" height="34" rx="3" fill="#F6F0E6"/>
+      <rect x="290" y="7" width="25" height="36" rx="3" fill="#F6F0E6"/>
+      <rect x="322" y="13" width="45" height="30" rx="3" fill="#F6F0E6"/>
+      <rect x="374" y="16" width="7" height="27" rx="2" fill="#CFA89B"/>
+    </g>
+  </g>
+</svg>
