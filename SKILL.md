@@ -59,7 +59,7 @@ Every invocation is a new generation job unless the user explicitly asks to cont
 
 Build the source set only from images attached to the current invocation, paths explicitly supplied by the user, or earlier user-supplied source images that the current request explicitly identifies with wording such as “same image” or “again.” A conversation attachment remains the intended source even when it has no usable local filesystem path. Do not replace it with an arbitrary workspace file.
 
-Never scan the Desktop, current workspace, default output root, or unrelated folders broadly to find “some image” when a source is missing. Files under `~/Desktop/xxd-panel-026/`, task directories created by this skill, and files carrying this skill's output suffixes are historical outputs, not source candidates. Do not inspect or reuse them unless the user explicitly names one as an input or asks for comparison/review. If the intended source cannot actually be accessed, ask for that source or its path; do not improvise from an existing poster.
+Never scan the Desktop, current workspace, default output root, or unrelated folders broadly to find “some image” when a source is missing. Files under `~/Desktop/xxd/xxd-panel-026/`, task directories created by this skill, and files carrying this skill's output suffixes are historical outputs, not source candidates. Do not inspect or reuse them unless the user explicitly names one as an input or asks for comparison/review. If the intended source cannot actually be accessed, ask for that source or its path; do not improvise from an existing poster.
 
 Do not downgrade a new generation request into validation of an old artifact. If no usable raster route is verified, report only that verified execution limitation; never present an earlier file's dimensions, seam audit, or visual review as completion of the new job.
 
@@ -147,23 +147,23 @@ For multi-select, run the applicable command block once per selected mode and sa
 # top-bottom: source-adaptive, exact horizontal seam
 scripts/compose_panel.py --plan --layout top-bottom --source photo.png
 scripts/compose_panel.py --source photo.png --design geometry.png \
-    --out ~/Desktop/xxd-panel-026/IMG_4821-top-bottom/IMG_4821.png --layout top-bottom
+    --out ~/Desktop/xxd/xxd-panel-026/IMG_4821-top-bottom/IMG_4821.png --layout top-bottom
 
 # left-right: source-adaptive, exact vertical seam
 scripts/compose_panel.py --plan --layout left-right --source photo.png
 scripts/compose_panel.py --source photo.png --design geometry.png \
-    --out ~/Desktop/xxd-panel-026/IMG_4821-left-right/IMG_4821-lr.png --layout left-right
+    --out ~/Desktop/xxd/xxd-panel-026/IMG_4821-left-right/IMG_4821-lr.png --layout left-right
 
 # design-only: source-adaptive ratio and dimensions; no visible photo or seam
 scripts/compose_panel.py --source photo.png --design geometry.png \
-    --out ~/Desktop/xxd-panel-026/IMG_4821-design-only/IMG_4821-design.png \
+    --out ~/Desktop/xxd/xxd-panel-026/IMG_4821-design-only/IMG_4821-design.png \
     --layout design-only
 
 # wallpaper-pack: four separately generated assets, finalized separately
-scripts/compose_panel.py --design phone.png --out ~/Desktop/xxd-panel-026/IMG_4821-wallpaper-pack/IMG_4821-wallpaper-phone.png --layout design-only --size 1440x3200
-scripts/compose_panel.py --design ipad.png --out ~/Desktop/xxd-panel-026/IMG_4821-wallpaper-pack/IMG_4821-wallpaper-ipad.png --layout design-only --size 2048x2732
-scripts/compose_panel.py --design desktop.png --out ~/Desktop/xxd-panel-026/IMG_4821-wallpaper-pack/IMG_4821-wallpaper-desktop.png --layout design-only --size 3840x2160
-scripts/compose_panel.py --design watch.png --out ~/Desktop/xxd-panel-026/IMG_4821-wallpaper-pack/IMG_4821-wallpaper-watch.png --layout design-only --size 1024x1024
+scripts/compose_panel.py --design phone.png --out ~/Desktop/xxd/xxd-panel-026/IMG_4821-wallpaper-pack/IMG_4821-wallpaper-phone.png --layout design-only --size 1440x3200
+scripts/compose_panel.py --design ipad.png --out ~/Desktop/xxd/xxd-panel-026/IMG_4821-wallpaper-pack/IMG_4821-wallpaper-ipad.png --layout design-only --size 2048x2732
+scripts/compose_panel.py --design desktop.png --out ~/Desktop/xxd/xxd-panel-026/IMG_4821-wallpaper-pack/IMG_4821-wallpaper-desktop.png --layout design-only --size 3840x2160
+scripts/compose_panel.py --design watch.png --out ~/Desktop/xxd/xxd-panel-026/IMG_4821-wallpaper-pack/IMG_4821-wallpaper-watch.png --layout design-only --size 1024x1024
 ```
 
 `--size WIDTHxHEIGHT` has priority over `--canvas` and `--width`. With neither `--size` nor `--canvas`, `--source` activates source-adaptive sizing and no stock ratio is imposed. Legacy `--top` and `--bottom` remain aliases for `--source` and `--design`.
@@ -216,7 +216,7 @@ Only when no local scripting is available, fall back to one whole-canvas call. S
 
 ## Output location
 
-Save every generated poster under `~/Desktop/xxd-panel-026/`. Create the root and task directory if they do not exist.
+Save every generated poster under `~/Desktop/xxd/xxd-panel-026/`. Create the shared `~/Desktop/xxd/` wrapper, the skill root, and the task directory if they do not exist.
 
 - Wrap each source-and-mode result in one task directory: `<source-stem>-top-bottom/`, `<source-stem>-left-right/`, `<source-stem>-design-only/`, or `<source-stem>-wallpaper-pack/`. A batch or multi-select creates one sibling task directory per source and selected mode; never mix different sources in one directory.
 - Inside an ordinary-mode task directory, name the single final PNG after the source (`IMG_4821.png`), append `-lr` for `left-right`, or append `-design` for `design-only`.
