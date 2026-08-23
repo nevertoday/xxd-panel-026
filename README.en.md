@@ -52,8 +52,8 @@ Colours may move towards ivory, warm white, pale grey, sand, dusty pink, pale oc
 
 <table>
   <tr>
-    <td width="50%"><a href="https://x.com/xiaoxiaodong01/status/2090433161096581434"><img src="https://pbs.twimg.com/media/HQK0forakAEWQKs.jpg?format=jpg&amp;name=large" alt="XXD Panel 026 sample 1"></a></td>
-    <td width="50%"><a href="https://x.com/xiaoxiaodong01/status/2090433161096581434"><img src="https://pbs.twimg.com/media/HQK1hWDbMAA3nqE.jpg?format=jpg&amp;name=large" alt="XXD Panel 026 sample 2"></a></td>
+    <td width="50%"><a href="https://x.com/xiaoxiaodong01/status/2090433161096581434"><img src="./assets/examples/sample-01.jpg" alt="XXD Panel 026 sample 1"></a></td>
+    <td width="50%"><a href="https://x.com/xiaoxiaodong01/status/2090433161096581434"><img src="./assets/examples/sample-02.jpg" alt="XXD Panel 026 sample 2"></a></td>
   </tr>
 </table>
 
