@@ -1,8 +1,8 @@
 # XXD Panel 026 · Full Generation Prompt (English)
 
-Treat the selected uploaded photograph as the sole content source. Ordinary modes create one finished premium editorial artwork for this photograph; wallpaper-pack creates four separate device wallpaper files under a caller-locked `INDEPENDENT` or `LINKED` relationship. Never combine them with another photo or turn any outputs into one overview, grid, collage, or series sheet.
+Treat the selected uploaded photograph as the sole content source. Each selected ordinary mode creates one finished premium editorial artwork for this photograph; selected wallpaper-pack creates four separate device wallpaper files under a caller-locked `INDEPENDENT` or `LINKED` relationship. Never combine them with another photo or turn any outputs into one overview, grid, collage, or series sheet.
 
-Use one mode locked in section 7: photograph above and humanist geometry below, photograph left and humanist geometry right, one transformed design filling the canvas, or four separately recomposed device wallpapers. Paired modes stay exact 50/50; source-hidden modes have no photographic region or seam. Before any generation call, explicitly resolve automatic copy, custom copy, or text-free output; automatic and custom copy also require a target language or locale.
+Use one or more modes locked in section 7: photograph above and humanist geometry below, photograph left and humanist geometry right, one transformed design filling the canvas, and/or four separately recomposed device wallpapers. Each paired mode stays exact 50/50; source-hidden modes have no photographic region or seam. Before any generation call, explicitly resolve automatic copy, custom copy, or text-free output; automatic and custom copy also require a target language or locale.
 
 The **transformed design frame** means the lower panel in top-bottom, the right panel in left-right, and the full canvas in design-only or each wallpaper output.
 
@@ -162,7 +162,7 @@ Remove unused optional lines rather than rendering placeholders. In text-free mo
 
 ### 7.1 Four modes
 
-Lock one mode before generation; when the caller did not provide one, ask before continuing:
+Lock one or more modes before generation; when the caller provides none, ask before continuing. Accept one number, multiple numbers separated by `+`, Chinese/English commas or whitespace, mode names, and `全部` / `all`; deduplicate and execute in menu order 1→4. Each selected ordinary mode produces one file and selected wallpaper mode produces four, so `all` yields seven PNGs per source across four sibling mode directories, never an overview. By default, share the same locked source-specific copy verbatim across all selected modes; only explicit per-mode copy instructions create overrides. In multi-select, custom dimensions must be labeled by mode; ask rather than applying one ambiguous unlabeled size to several modes.
 
 1. **TOP_BOTTOM:** source photo above, transformed humanist geometry below; exact equal height. With no explicit size, each panel retains the complete source W×H and the final canvas is W×2H.
 2. **LEFT_RIGHT:** source photo left, transformed humanist geometry right; exact equal width. With no explicit size, each panel retains the complete source W×H and the final canvas is 2W×H.
@@ -236,7 +236,7 @@ REFERENCE ROLE: SOURCE ONLY | SOURCE CONTENT + ANCHOR VISUAL DNA
 
 ## 8. Output limits
 
-- Ordinary modes produce one independent completed image per source; wallpaper-pack produces exactly four separate wallpaper files per source. Process multiple source photos one by one.
+- Each selected ordinary mode produces one independent finished image per source; selected wallpaper-pack adds exactly four separate wallpaper files. `all` therefore produces seven PNGs across four sibling task directories per source. Process multiple source photos separately and never create a collage, grid, contact sheet, or series overview.
 - Copy follows the resolved preflight: automatic or custom copy uses one clearly dominant title and up to two to four microtext groups; when custom copy omits microtext, derive supporting microtext professionally or keep title-only if requested. Text-free mode renders no letters, characters, numbers, or decorative pseudo-text. Include no logo, watermark, signature, palette, legend, frame note, or interface element.
 - Do not output analysis, process notes, title candidates, or parameter tables.
 
