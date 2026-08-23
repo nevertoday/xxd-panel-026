@@ -7,6 +7,8 @@ description: "Create XXD Panel 026 artwork from supplied photos in four independ
 
 Turn every supplied photograph into finished editorial artwork. Each selected mode may show the source photo above, show it on the left, omit it from one transformed canvas, or expand it into four separately composed device wallpapers while still using it as the sole content source.
 
+Operational rules follow the shared XXD Panel workflow contract: four combinable modes; source-adaptive ordinary canvases; exact 50/50 paired geometry; linked or independent four-device wallpapers; copy and locale preflight; fresh generation jobs; privacy-preserving raster generation; and one fresh task directory per source and mode. Style-specific sections may refine aesthetics, copy hierarchy, and acceptance criteria but never override this contract.
+
 ## Non-negotiable contract
 
 - One source photo may be processed in one or more selected modes. Each selected ordinary mode (`top-bottom`, `left-right`, `design-only`) produces one output; selected `wallpaper-pack` produces exactly four separate files. Selecting all four modes therefore produces seven final PNGs per source. Keep every mode in its own task directory and never combine modes or wallpaper files into a grid, collage, contact sheet, or overview.
@@ -27,7 +29,7 @@ Mode and device constraints may change placement and aspect ratio, never the 026
 
 Reject a result as generic when its source could be replaced by an unrelated photo without materially changing the subject construction, spatial relationship, palette, line logic, or copy. Generic Bauhaus circles, pastel blobs, architecture-diagram decoration, sun-and-wave symbols, stock vector landscapes, or soft-colored wallpaper are not acceptable substitutes for a specific person, object, animal, building, gesture, or relationship. Device safe areas are secondary placement constraints; they must not erase source identity, quiet spatial hierarchy, subtle relief, main title, or editorial typography.
 
-## Raster generation contract
+## Raster generation and privacy
 
 Use Codex's built-in `image_gen` capability by default for every generated or edited visual asset, following the available `imagegen` skill. If a local source image must be used, view it first so it is visible to the built-in edit/generation flow. Issue one built-in call per distinct asset; a four-device wallpaper pack requires four separate calls, not one `n` request. In `linked`, one of those four outputs is the approved visual anchor—it is not an extra fifth master and never becomes a crop source. “Flat geometry,” “fine structural line,” “embossed paper,” or “vector-like edge” describes appearance only; it never authorizes SVG construction. Do not create or return SVG, HTML, CSS, Canvas, diagrams, hand-coded vector markup, or other code-rendered substitutes. Generate bitmap assets, move/copy selected outputs from Codex's generated-images location into the requested output directory, finalize them with `scripts/compose_panel.py`, and deliver PNG files. The script is only for deterministic raster planning, crop/paste, sizing, and audit—not for inventing the artwork.
 
@@ -53,7 +55,7 @@ An explicit invocation of `/xxd-panel-026` or `$xxd-panel-026`, followed by the 
 
 Only report image generation as unavailable after built-in capability and `scripts/configured_imagegen.py probe` both fail to establish a usable bitmap route. State the verified limitation narrowly instead of guessing its cause, and refer only to the “configured bitmap route”—never identify the provider. Never silently substitute SVG or programmatic drawing, and never modify credentials, provider settings, accounts, billing, or global environment variables as a workaround.
 
-## Task boundary and source discovery
+## Fresh-task and source boundary
 
 Every invocation is a new generation job unless the user explicitly asks to continue, audit, review, edit, or reuse a named earlier result. Repeating the same source, mode, dimensions, or wording means **generate a fresh result**, not return or re-audit a matching old file. Resolve the next unused task-directory name before generation and write the new deliverable there; an existing result can never satisfy the current job.
 
@@ -137,7 +139,7 @@ Do not downgrade a new generation request into validation of an old artifact. If
 14. Open and visually inspect every finalized image at normal view and thumbnail size; never infer aesthetic success from a completed generation call, valid dimensions, or a clean seam. Compare it with the source observations and aesthetic motive lock, then apply the acceptance gate. In a `linked` pack, inspect and approve the anchor before fan-out; never propagate a failed anchor. When a hard invariant is broken—including generic or source-independent geometry, loss of the principal subject/relationship, cold or saturated palette drift, obvious 3D depth, generic copy that fails the swap test, distorted user intent, a missing/weak title hierarchy, visible source photo in a source-hidden mode, unsafe wallpaper composition, or linked-family drift—retry only the faulty generated asset once, then finalize, reopen, and recheck. After one failed correction, return the best result and explicitly name the unresolved issue instead of silently presenting it as successful.
 15. Return the finished artworks in source order, then menu order 1→4, with absolute saved paths. A wallpaper pack returns phone, iPad, desktop, then watch. Apart from a necessary failure note, do not add design analysis, title candidates, or parameter lists.
 
-## Producing the selected mode or modes
+## Generation payload and composition commands
 
 Use the same deterministic script for every canvas. `wallpaper-pack` is a skill-level batch of four `design-only` canvases, not a fourth split layout inside the script. The selected wallpaper relationship changes the generation references, not the output count or finalization commands:
 
