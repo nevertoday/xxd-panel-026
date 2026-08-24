@@ -39,7 +39,18 @@ It does not place a muted-colour filter over a photo. It preserves why that part
 
 These samples demonstrate the 026 aesthetic motive; they do not turn the post's earlier canvas into a current default. The four modes still follow the explicit pre-generation canvas and custom sizing logic below.
 
-## Why it exists
+<!-- xxd-panel-benefit:start -->
+## Quick fit check: is XXD Panel 026 right for you?
+
+| What you need to know | What this style gives you |
+|---|---|
+| **What you will get** | Translate photographic facts into quiet, gentle geometry that remains unmistakably recognisable |
+| **Recognizable signature** | RECOGNISE QUIETLY · REDUCE GENTLY · LET THE PAPER BREATHE |
+| **How it respects your source** | Recognizable identity, relationships, structure, and supplied facts stay anchored. Styling reorganizes the visual language instead of replacing your content with an unrelated template. |
+| **Where you can use it** | Create top-bottom, left-right, design-only, and four-device wallpaper outputs in multiple ratios or exact sizes. Delivery changes; the Panel's style identity does not get diluted. |
+<!-- xxd-panel-benefit:end -->
+
+## How it turns your source into a distinctive result
 
 Many “photo to minimal poster” workflows end with the same circles, pastel blocks, and architectural lines. The result may look calm, yet have almost nothing to do with the source. Gesture disappears, relationships are replaced by a template, and the same title could survive a completely different image.
 
