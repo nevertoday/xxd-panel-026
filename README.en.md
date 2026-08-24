@@ -59,29 +59,22 @@ Colours may move towards ivory, warm white, pale grey, sand, dusty pink, pale oc
 
 <p align="center"><a href="https://x.com/xiaoxiaodong01/status/2090433161096581434">View the original post and full prompt →</a></p>
 
-These samples demonstrate the 026 aesthetic motive; they do not turn the post's earlier canvas into a current default. The four modes still follow the source-adaptive and custom sizing logic below.
+These samples demonstrate the 026 aesthetic motive; they do not turn the post's earlier canvas into a current default. The four modes still follow the explicit pre-generation canvas and custom sizing logic below.
 
-## Four outputs, one humanist geometry
+## Four combinable output modes
 
-The four modes support single or multiple selection. Reply with `1`, `1+3`, `1,2,4`, or `all`; the Skill deduplicates and runs them in menu order 1→4. Every mode is delivered independently in its own task directory—never as an overview—and `all` yields seven PNGs per source (one for each ordinary mode plus four wallpapers). Sizes may be labelled by mode in the same reply; unlabeled ordinary modes remain source-adaptive. Copy is shared across selected modes by default and may be overridden per mode.
+Choose one or several modes with `1`, `1+3`, `1,2,4`, or `all`; `all` produces seven separate PNGs per source. After mode selection and before generation, the Skill explicitly asks for the whole finished canvas: the original-prompt `3:4`, an explicit source-aspect choice, a common ratio, or custom ratio/exact pixels. Source dimensions are never applied silently.
 
-| Mode | Sizing logic | Deliverable |
+| Mode | Canvas rule | Result |
 | --- | --- | --- |
-| Top–bottom | source-adaptive | source photograph above, humanist geometry below, each panel retains the complete source size; exact equal height |
-| Left–right | source-adaptive | source photograph left, humanist geometry right, each panel retains the complete source size; exact equal width |
-| Design only | source-adaptive | source used as evidence but absent from the final canvas; retains the source ratio and dimensions |
-| Wallpaper pack | device-specific | four separate PNGs for phone, iPad, desktop, and children's watch |
+| `top-bottom` | user-confirmed whole canvas | one complete generation: high-fidelity source above, 026 design below, approximately 50/50 |
+| `left-right` | user-confirmed whole canvas | one complete generation: high-fidelity source left, 026 design right, approximately 50/50 |
+| `design-only` | user-confirmed whole canvas | 026 design fills the canvas; source remains invisible |
+| `wallpaper-pack` | confirmed per device | separate phone, iPad, desktop, and children's-watch PNGs |
 
-Exact user-supplied pixels take priority; otherwise ordinary modes adapt to the source instead of imposing stock ratios. Top–bottom needs an even user-specified total height; left–right needs an even user-specified total width. The skill never silently changes an exact requested size.
+Paired modes use the source as a high-fidelity edit/reference input and one complete style prompt to generate the finished composition directly, so photography, design, colour, light, typography, and meaning can cohere. Deterministic composition is fallback-only: after one targeted complete-canvas retry fails, when pixel-identical source preservation is explicitly required, when the active route cannot realise the canvas, or for lossless final pixel calibration.
 
-Wallpaper-pack also has no silent size default: choose the common device preset—phone `1440×3200`, iPad `2048×2732`, desktop `3840×2160`, watch `1024×1024`—or provide labeled custom resolutions.
-
-A wallpaper pack supports two relationships:
-
-- **Linked set:** approve one anchor artwork first, then let the other three reference both the original photo and the same anchor while recomposing for their devices.
-- **Four independent works:** every device receives only the original photo and may explore a freer composition.
-
-Linked does not mean cropped. All four wallpapers are generated, composed, and reviewed separately.
+Wallpapers may be linked or independent. A linked pack approves one iPad anchor, then recomposes every other device from the original plus that same anchor. An independent pack gives each device only the original. Neither crops another device output nor chains derivatives.
 
 ## Copy is not a label added afterwards
 
@@ -131,24 +124,11 @@ Full specifications:
 
 Local composition needs Python 3 and Pillow. The safe bitmap bridge uses Python 3.11+ `tomllib`. Generation requires either the host agent's built-in raster capability or an already configured compatible raster route.
 
-## Repository
+## Complete-canvas first, raster-only delivery
 
-```text
-xxd-panel-026/
-├── SKILL.md
-├── README.md / README.en.md / README.ja.md / README.ko.md / README.ar.md
-├── agents/openai.yaml
-├── assets/
-│   ├── banner.svg
-│   └── examples/
-├── scripts/
-│   ├── compose_panel.py
-│   └── configured_imagegen.py
-└── references/
-    ├── xxd-panel-026-prompt.zh-CN.md
-    ├── xxd-panel-026-prompt.en.md
-    └── 026-source.md
-```
+The image model owns the aesthetics of the entire finished composition; paired layouts also default to one complete-canvas generation. `scripts/compose_panel.py` remains only for condition-based recovery, lossless pixel calibration, and read-only audit. It is not run pre-emptively and does not judge aesthetic success.
+
+Every deliverable is a raster PNG and every invocation creates a fresh task under `~/Desktop/xxd/`. The configured image route exposes sanitised status only—never providers, endpoints, credentials, headers, prompts, responses, or account details. SVG, HTML, Canvas, diagrams, and programmatic drawing are not substitutes for the final artwork.
 
 ## About XXD
 

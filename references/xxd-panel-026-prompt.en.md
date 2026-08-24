@@ -1,5 +1,13 @@
 # XXD Panel 026 · Full Generation Prompt (English)
 
+## Runtime complete-canvas contract — highest priority
+
+- `TOP_BOTTOM` and `LEFT_RIGHT` default to one complete finished generation using the current source as a high-fidelity edit/reference input. Do not pre-split the job into photographic and design halves.
+- Top-bottom keeps the faithful source in approximately the upper 50% and performs this style transformation below; left-right uses the faithful source in approximately the left 50% and the transformation on the right. Unify both regions through colour, light, rhythm, typography, and meaning.
+- `DESIGN_ONLY` and `WALLPAPER_PACK` use the complete canvas while the source remains an invisible identity/content reference. Recompose every wallpaper separately for its device.
+- `FINAL CANVAS` means the ratio/pixels of the whole finished artwork and must be explicitly resolved before generation; never apply source dimensions silently. `DESIGN FRAME` is used only if a failed complete-canvas retry triggers deterministic composition fallback.
+- Retry a failed complete canvas once against the failed constraint only. Scripted composition is allowed only after that retry still fails, when pixel-identical source preservation is explicitly required, when the active route cannot realise the canvas, or for lossless pixel calibration.
+
 Treat the selected uploaded photograph as the sole content source. Each selected ordinary mode creates one finished premium editorial artwork for this photograph; selected wallpaper-pack creates four separate device wallpaper files under a caller-locked `INDEPENDENT` or `LINKED` relationship. Never combine them with another photo or turn any outputs into one overview, grid, collage, or series sheet.
 
 Use one or more modes locked in section 7: photograph above and humanist geometry below, photograph left and humanist geometry right, one transformed design filling the canvas, and/or four separately recomposed device wallpapers. Each paired mode stays exact 50/50; source-hidden modes have no photographic region or seam. Before any generation call, explicitly resolve automatic copy, custom copy, or text-free output; automatic and custom copy also require a target language or locale.
@@ -164,9 +172,9 @@ Remove unused optional lines rather than rendering placeholders. In text-free mo
 
 Lock one or more modes before generation; when the caller provides none, ask before continuing. Accept one number, multiple numbers separated by `+`, Chinese/English commas or whitespace, mode names, and `全部` / `all`; deduplicate and execute in menu order 1→4. Each selected ordinary mode produces one file and selected wallpaper mode produces four, so `all` yields seven PNGs per source across four sibling mode directories, never an overview. By default, share the same locked source-specific copy verbatim across all selected modes; only explicit per-mode copy instructions create overrides. In multi-select, custom dimensions must be labeled by mode; ask rather than applying one ambiguous unlabeled size to several modes.
 
-1. **TOP_BOTTOM:** source photo above, transformed humanist geometry below; exact equal height. With no explicit size, each panel retains the complete source W×H and the final canvas is W×2H.
-2. **LEFT_RIGHT:** source photo left, transformed humanist geometry right; exact equal width. With no explicit size, each panel retains the complete source W×H and the final canvas is 2W×H.
-3. **DESIGN_ONLY:** the source remains reference evidence but is not visible; the transformed design fills the canvas with no seam. With no explicit size, use the source W×H.
+1. **TOP_BOTTOM:** generate the confirmed whole canvas once, with the high-fidelity source in approximately the upper half and the humanist-geometric design below; unify both regions through colour, rhythm, and meaning.
+2. **LEFT_RIGHT:** generate the confirmed whole canvas once, with the high-fidelity source in approximately the left half and the humanist-geometric design on the right as one finished design.
+3. **DESIGN_ONLY:** use the source only as content and identity evidence; let the humanist-geometric design fill the confirmed whole canvas with no visible source or reserved panel.
 4. **WALLPAPER_PACK:** one source produces four separate transformed wallpapers—phone, iPad, desktop, and watch—with no visible source photo. Copy follows the preflight choice of automatic, custom, or text-free output. Also lock an `INDEPENDENT` or `LINKED` wallpaper relationship.
 
 User intent selects the mode; canvas orientation must not silently change it. Paired modes stay exact 50/50. Source-hidden modes must not reintroduce the source, a seam, or reserved placeholder space. Wallpaper-pack recomposes every device separately; never mechanically crop or resize one wallpaper into another.
@@ -184,22 +192,15 @@ Resolve dimensions in this order:
 
 1. exact user-supplied pixels, such as 2560×1440;
 2. a user-supplied ratio or destination;
-3. source-adaptive sizing for ordinary modes: W×2H top-bottom, 2W×H left-right, and W×H design-only; wallpaper-pack requires the user to choose the common device preset or provide labeled custom sizes.
+3. an explicitly chosen canvas: original-prompt 3:4, source aspect, a common ratio, or a custom ratio; wallpaper-pack requires the user to choose the common device preset or provide labelled custom sizes.
 
 Honor exact pixels literally. Top-bottom needs an even total height; left-right needs an even total width for an exact split. Design-only accepts any positive whole-pixel dimensions. Never silently round a requested exact size.
 
 Wallpaper-pack has no silent size default. When the user explicitly chooses the common device preset, use phone 1440×3200, iPad 2048×2732 portrait, desktop 3840×2160, and watch 1024×1024; otherwise use labeled per-device custom sizes. Never apply one unlabeled size arbitrarily.
 
-### 7.3 Prepare assets separately
+### 7.3 Generate the complete canvas first
 
-Do not ask the image model to generate both regions at once. Plan exact dimensions with the script, then prepare assets separately:
-
-- Top-bottom: the photographic asset fits the upper frame and the transformed design fits the lower frame.
-- Left-right: the photographic asset fits the left frame and the transformed design fits the right frame.
-- Design-only: generate one transformed design at the full final size. Do not enlarge a former lower-half asset afterward.
-- Wallpaper-pack: generate four transformed designs separately at their resolved sizes and aspect ratios. `INDEPENDENT` solves all four from the source photo; `LINKED` approves one anchor and lets the other three reference the original photo plus that same anchor. Both relationships share subject and 026 style DNA while solving subject position, geometric hierarchy, typography, and safe area for each device.
-
-Sections 4 through 6 apply unchanged to the transformed design. Its 4–6 colors and locked copy still derive from the current photo. The design asset itself contains no extra photograph, seam, frame, or reserved area.
+For a paired mode, send the source as a high-fidelity edit/reference input together with the complete 026 aesthetic prompt and locked copy, then generate the whole finished canvas in one job. Treat 50/50 as the composition target while prioritising unity of colour, light, rhythm, typography, and meaning. Design-only and all four wallpapers each generate a complete canvas. Prepare separate photographic and design assets only after a targeted complete-canvas retry still fails or another runtime-contract fallback condition applies.
 
 ### 7.4 Resolved mode block
 
@@ -208,14 +209,13 @@ Append the resolved values to the generation prompt:
 ```text
 OUTPUT MODE: TOP_BOTTOM | LEFT_RIGHT | DESIGN_ONLY | WALLPAPER_PACK
 DEVICE PROFILE: NONE | PHONE | IPAD | DESKTOP | WATCH
-FINAL SIZE: <exact WIDTHxHEIGHT>
-DESIGN FRAME: <exact WIDTHxHEIGHT>
-SOURCE VISIBILITY: UPPER PANEL | LEFT PANEL | REFERENCE ONLY — NOT VISIBLE
-LAYOUT RULE: Fill DESIGN FRAME completely. Render no extra photograph, seam, frame, or reserved area inside the transformed design.
-WALLPAPER RULE: For a device profile, recompose for this aspect ratio, keep system-UI zones low-information and essential content inside the safe region, render no fake clock/icons/dock/controls or device mockup, and never crop another device's wallpaper to create this one.
+FINAL CANVAS: <whole finished ratio and/or exact WIDTHxHEIGHT>
+GENERATION STRATEGY: SINGLE COMPLETE CANVAS
+REFERENCE ROLE: SOURCE — HIGH-FIDELITY CONTENT AND IDENTITY ANCHOR
+SOURCE VISIBILITY: UPPER 50% | LEFT 50% | REFERENCE ONLY — NOT VISIBLE
+LAYOUT RULE: Generate one finished image. Paired modes keep approximately equal source and transformed regions while unifying colour, light, rhythm, typography, and meaning. Source-hidden modes use the complete canvas and show no photo or reserved panel.
 WALLPAPER RELATIONSHIP: NONE | INDEPENDENT | LINKED
-ANCHOR DEVICE: NONE | PHONE | IPAD | DESKTOP | WATCH
-REFERENCE ROLE: SOURCE ONLY | SOURCE CONTENT + ANCHOR VISUAL DNA
+ANCHOR DEVICE: NONE | IPAD
 ```
 
 ### 7.5 Wallpaper safe regions

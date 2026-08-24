@@ -1,21 +1,21 @@
 ---
 name: xxd-panel-026
-description: "Create XXD Panel 026 artwork from supplied photos in four independently selectable modes that may be combined: photo above/humanist geometry below, photo left/humanist geometry right, transformed design alone, or a four-device wallpaper pack with either independent compositions or anchor-linked visual continuity. Uses source-adaptive sizing by default, exact 50/50 paired layouts, optional custom dimensions, and an explicit preflight choice for copy, locale, or text-free output. Use for the exact quiet architectural/editorial 026 style; never use it for collages or generic pastel abstraction."
+description: "Create XXD Panel 026 artwork from supplied photos in four independently selectable modes that may be combined: photo above/humanist geometry below, photo left/humanist geometry right, transformed design alone, or a four-device wallpaper pack with either independent compositions or anchor-linked visual continuity. Uses an explicit whole-canvas ratio or resolution preflight, complete-canvas generation by default, an approximately equal paired layout target, and an explicit choice for copy, locale, or text-free output. Use for the exact quiet architectural/editorial 026 style; never use it for collages or generic pastel abstraction."
 ---
 
 # XXD Panel 026 · 温和人文几何
 
 Turn every supplied photograph into finished editorial artwork. Each selected mode may show the source photo above, show it on the left, omit it from one transformed canvas, or expand it into four separately composed device wallpapers while still using it as the sole content source.
 
-Operational rules follow the shared XXD Panel workflow contract: four combinable modes; source-adaptive ordinary canvases; exact 50/50 paired geometry; linked or independent four-device wallpapers; copy and locale preflight; fresh generation jobs; privacy-preserving raster generation; and one fresh task directory per source and mode. Style-specific sections may refine aesthetics, copy hierarchy, and acceptance criteria but never override this contract.
+Operational rules follow the shared XXD Panel workflow contract: four combinable modes; an explicitly confirmed whole-canvas ratio or exact resolution before generation; single complete-canvas raster generation by default; high-fidelity source reference in paired modes; linked or independent four-device wallpapers; copy and locale preflight; fresh generation jobs; privacy-preserving raster generation; deterministic composition as fallback only; and one fresh task directory per source and mode. Style-specific sections refine aesthetics and copy but never override this contract.
 
 ## Non-negotiable contract
 
 - One source photo may be processed in one or more selected modes. Each selected ordinary mode (`top-bottom`, `left-right`, `design-only`) produces one output; selected `wallpaper-pack` produces exactly four separate files. Selecting all four modes therefore produces seven final PNGs per source. Keep every mode in its own task directory and never combine modes or wallpaper files into a grid, collage, contact sheet, or overview.
 - Resolve a non-empty ordered set of output modes before generation: `top-bottom` (photo above, geometric design below), `left-right` (photo left, geometric design right), `design-only` (only the transformed design is visible), and/or `wallpaper-pack` (phone, iPad, desktop, and watch wallpapers). Accept one choice, multiple choices separated by `+`, Chinese/English commas or whitespace, natural-language names, or `全部` / `all`. Deduplicate repeated choices and execute in menu order 1→4. If none is specified, ask the concise multi-select question in the workflow and wait; never ask again when the selected set is already clear.
 - When the selected set contains `wallpaper-pack`, it has a second required choice: `linked` continuity or `independent` compositions. Ask the two-choice follow-up in the workflow whenever that relationship is not already specified. `linked` uses one approved wallpaper as a visual anchor for the other three; `independent` gives every device only the original source photo. Neither relationship permits mechanical resizing, cropping one wallpaper into another, or returning fewer than four files. Do not ask this follow-up when wallpaper mode is not selected.
-- In `top-bottom` and `left-right`, the two panels are always exact 50/50. In `design-only`, there is no photographic panel and no seam; the transformed design fills the entire final canvas.
-- Pixel dimensions supplied by the user have highest priority, followed by an explicit canvas ratio or destination. Otherwise use source-adaptive sizing: each paired panel keeps the source photo's complete pixel dimensions and aspect ratio, so `top-bottom` becomes source width × twice source height, `left-right` becomes twice source width × source height, and `design-only` uses the source dimensions. Generate the transformed asset at that planned aspect and the closest supported high-quality size before composing; prefer the exact frame size, otherwise resize proportionally without cropping. Never generate at a stock ratio and crop it into place. An exact paired layout requires an even split-axis dimension only when the user overrides the adaptive size.
+- In `top-bottom` and `left-right`, target a visually equal 50/50 relationship inside one coherent generated canvas. Minor generative deviation is acceptable unless the user explicitly requires pixel-exact halves; exact deterministic geometry belongs to fallback composition. In `design-only`, there is no photographic panel and no seam; the transformed design fills the entire final canvas.
+- The whole final canvas ratio or exact pixels must be explicitly resolved before generation. Offer the original-prompt 3:4, source aspect as an explicit choice, common ratios, or custom ratio/pixels; never infer explicitly selected final-canvas dimensions silently. Exact pixels take precedence over an explicitly chosen ratio.
 - Any visible photographic region remains faithful. Allow only restrained editorial color grading and seamless environmental extension needed to fit its frame. Never stretch, distort, redraw, replace, or structurally alter the subject. In `design-only` and every wallpaper output, use the source only as evidence and render none of it in the final artwork.
 - The transformed region is a photo-derived minimal humanist geometric construction: recognizable subject evidence, flat restrained shapes, fine contour or structural lines, generous quiet space, and only a whisper of pressed-paper relief. It is not a trace, realistic illustration, generic pastel wallpaper, or unrelated abstraction.
 - Use a restrained 4–6 color palette derived from the source photo and translated toward warm white, sand, pale ochre, dusty pink, mist blue, sage, or nearby low-stimulation hues. These are roles, not a fixed palette.
@@ -67,154 +67,115 @@ Do not downgrade a new generation request into validation of an old artifact. If
 
 ## Workflow
 
-1. Resolve the selected mode set and canvases before generation. If the user did not specify any mode, use the line breaks and numbered-list structure below. Present its contents as normal chat text, not as a code block, and never collapse the choices into one sentence:
+1. Resolve one or more modes. If missing, ask exactly this as normal multiline chat text and wait:
 
    ```text
    请选择一个或多个模式（回复序号；多选可用 +、顿号或逗号）：
 
-   1. 上下双联（完整原图＋同尺寸设计图）
-   2. 左右双联（完整原图＋同尺寸设计图）
-   3. 纯设计版（沿用原图比例，不显示原照片）
+   1. 上下双联（原图在上＋026 设计在下）
+   2. 左右双联（原图在左＋026 设计在右）
+   3. 纯设计版（只显示 026 设计画面）
    4. 四端壁纸套装
       手机＋iPad＋电脑＋儿童手表
 
-   前三种不指定尺寸时按原图自适应；也可主动指定尺寸。壁纸套装可按设备分别给分辨率。
    示例：1｜1+3｜1、2、4｜全部
    ```
 
-   Accept names, numbers, natural-language equivalents, `all` / `全部`, ratios, or exact pixels in the same reply. Normalize the answer to a deduplicated set in menu order. Do not ask this question when the request already contains one or more clear modes.
-   When the resolved set contains `wallpaper-pack` and the user has not already supplied the relationship, ask only this follow-up and wait:
+2. Before any ordinary-mode generation, explicitly resolve the **final finished canvas**, not the size of one panel. If the user did not already supply a ratio or exact pixels, ask and wait:
 
    ```text
-   请选择壁纸关系（回复序号即可）：
+   请选择最终成品画幅（回复序号即可；多选模式可共用，也可分别指定）：
 
-   1. 连贯套装（推荐）
-      先生成 iPad 定调图；其他三张参考原照片＋定调图分别重构
-   2. 四张独立
-      每张只参考原照片，构图变化更自由
+   1. 原提示词画幅 3:4
+   2. 跟随原图比例
+   3. 常用比例
+      1:1｜4:5｜2:3｜3:2｜16:9｜9:16
+   4. 自定义比例或准确像素
+
+   这里指整张最终成品的比例，不是单个区域。
+   示例：1｜3：9:16｜4：2160×3840
    ```
 
-   Accept `1`, `linked`, `连贯`, or equivalent as linked; accept `2`, `independent`, `独立`, or equivalent as independent. Do not ask this follow-up when the relationship is already clear. Use iPad as the linked anchor unless the user explicitly names another anchor device.
-2. Before any image-generation call, resolve the copy choice and target locale. If either is missing, ask the following single preflight question and wait. Present it as normal chat text, not a code block. The user may answer this together with the mode selection; do not ask again when the request already makes both copy mode and locale clear:
+   “跟随原图比例” is valid only when the user explicitly selects it. Never infer a silent canvas from the source dimensions, orientation, archived 3:4 brief, mode, or previous output. In multi-select, ask which mode an ambiguous ratio belongs to. Exact pixels take priority over a chosen ratio. For paired modes, odd split axes are allowed for direct generation; require an even split axis only if deterministic fallback composition is actually triggered.
+
+3. Before generation, resolve copy mode and locale. If missing, ask and wait:
 
    ```text
    正式做图前，请确认文字设置（回复序号即可）：
 
    1. 自动文案
-      我根据原图内涵创作文案；请同时注明语言或地区
+      我根据原图与 026 气质创作文案；请同时注明语言或地区
    2. 自定义文案
-      请直接输入主标题、可选微型文字，并注明语言或地区
+      请直接输入要呈现的准确文字，并注明语言或地区
    3. 无文字
 
-   示例：1｜阿拉伯语（现代标准阿拉伯语）
-   示例：2｜英式英语｜主标题：STAY CLOSE｜微型文字：...
+   示例：1｜日语
+   示例：2｜英式英语｜STILL IN BLOOM
    ```
 
-   `Automatic` requires an explicit target language or locale; `custom` requires the exact main title and an explicit target language or locale. User microtext is optional: professionally derive 2–4 supporting strings from the exact title and source unless the user supplies them or explicitly requests title-only. `Text-free` needs no locale. Treat wording such as “你来写中文”, “use my Japanese title …”, or “不要字” as already resolved. Never infer the copy language from a photographed person, visible sign, filename, or the language of the command when this preflight is required.
-3. Resolve dimensions independently for every selected mode with this priority: exact pixel size > explicit ratio/destination > source-adaptive dimensions. For adaptive `top-bottom`, use source `W×H` as both panel sizes and output `W×2H`; for adaptive `left-right`, use source `W×H` as both panel sizes and output `2W×H`; for adaptive `design-only`, output `W×H`. This preserves the entire photograph and makes the generated design natively fit the adjoining frame. For user-specified paired sizes, height must be even in `top-bottom` and width must be even in `left-right`; do not silently alter an odd split dimension. When multiple modes are selected, custom sizes must be labeled by mode; if one unlabeled size could apply to more than one selected mode, ask which mode or modes it belongs to instead of applying it arbitrarily. Unlabeled ordinary modes remain source-adaptive. `wallpaper-pack` is destination-driven rather than source-adaptive and has no silent size default. Only when wallpaper mode is selected and four device resolutions are not already clear, ask the user to choose either the common device preset—phone 1440×3200, iPad 2048×2732 portrait, desktop 3840×2160, watch 1024×1024—or provide labeled custom resolutions. Wait for this choice before generation; ask which device an unlabeled pack size belongs to rather than applying it arbitrarily.
+   Automatic copy must be source-specific and native to the resolved locale. Preserve exact custom copy verbatim. Do not infer locale from appearance, clothing, scenery, filenames, metadata, or visible signs.
 
-   For unresolved `wallpaper-pack` sizing, present this as normal chat text and wait:
+4. Only when `wallpaper-pack` is selected, resolve its relationship and device sizes. Ask for `1. 连贯套装` or `2. 四张独立` when missing. A linked set approves one iPad anchor by default; the other three outputs each reference the original plus that same anchor and are independently recomposed. An independent set gives every device only the original. Then ask for either the common preset—phone `1440×3200`, iPad `2048×2732`, desktop `3840×2160`, watch `1024×1024`—or labelled custom pixels. Never crop one wallpaper into another or chain derivatives.
 
-   ```text
-   请选择壁纸尺寸（回复序号即可）：
+5. Start a fresh job and reserve collision-safe output directories before generation. Use only the current invocation's explicit source or theme. Read `references/xxd-panel-026-prompt.en.md` or `references/xxd-panel-026-prompt.zh-CN.md` immediately before building the generation request.
+6. Privately lock the principal subject or inseparable relationship, at least three source-specific recognition cues, the style's complete aesthetic motive, composition logic, materials, palette, typography, exact copy, and locale. The source photograph is the factual and identity anchor; do not borrow content from samples or old outputs.
+7. Use **single complete-canvas generation as the default for every mode**:
+   - `top-bottom`: supply the source as a high-fidelity edit/reference input and generate one finished image containing the faithful source in the upper half and the 026 transformation in the lower half.
+   - `left-right`: supply the source as a high-fidelity edit/reference input and generate one finished image containing the faithful source on the left and the 026 transformation on the right.
+   - `design-only`: generate the 026 transformation across the whole canvas; the source is reference-only and not visible.
+   - `wallpaper-pack`: generate four separate complete canvases, one per device, following the resolved independent or linked relationship.
+8. Append the complete-canvas payload below to the full local style prompt. Keep all 026-specific aesthetic and typography instructions active across the entire composition. For paired modes, ask for approximately equal regions while prioritising a coherent finished artwork: colour, light, rhythm, typography, meaning, and any cross-panel echo must feel intentionally unified.
+9. Generate each distinct output as a fresh raster image job. Do not request two separate half-images, a contact sheet, a mockup, an empty reserved panel, or a code-rendered substitute.
+10. Inspect the actual bitmap at full size and thumbnail size. Check, in order: whole-poster integration; 026 aesthetic fidelity; source identity and structure; visual and semantic correspondence between regions; typography and locale; mode, ratio/pixels, count, and PNG format; then approximate 50/50 geometry.
+11. If a paired result fails a hard requirement, retry the **complete canvas once**, changing only the failed constraint. Use `scripts/compose_panel.py` only after that retry still fails, or when the user explicitly requires pixel-identical source preservation, the active image route cannot realise the selected canvas, the requested ratio exceeds route limits, or final lossless pixel calibration is necessary. The script is a fallback utility, never the default creative path and never an aesthetic judge.
+12. Reopen every final PNG, apply the acceptance gate, and return absolute paths in source order and mode order 1→4. Wallpaper order is phone, iPad, desktop, watch.
 
-   1. 常用设备预设
-      手机 1440×3200｜iPad 2048×2732｜电脑 3840×2160｜儿童手表 1024×1024
-   2. 自定义分辨率
-      请分别输入手机、iPad、电脑、儿童手表的尺寸
-   ```
-4. Open one new job boundary. Reserve one fresh sibling task directory per source and selected mode using the output rules below, even when an identical earlier result exists. Confirm the actual user-supplied source set under the source-discovery rules above. If none is accessible, ask the user to attach it or provide its path; do not invent a source photo or search output folders for a substitute.
-5. Inspect each current-job source image separately. For a local file that has not been seen, use the available image-viewing tool before generation. Never inspect an earlier output in place of the current source.
-6. Read the full prompt matching the user's working language:
-   - Chinese: [references/xxd-panel-026-prompt.zh-CN.md](references/xxd-panel-026-prompt.zh-CN.md)
-   - English: [references/xxd-panel-026-prompt.en.md](references/xxd-panel-026-prompt.en.md)
-7. Internally lock three to five decisive source facts: the principal subject or inseparable relationship, silhouette, pose/orientation, scale or spatial relationship, one defining contour/structural axis, and the source colors carrying the strongest atmosphere. Read the image on three grounded levels: literal fact, emotional or relational tension, and the latent implication suggested by their combination. Never invent biography, events, ownership, location, or feelings that the visible evidence cannot support. Every important shape, line, spacing decision, palette role, and copy turn must remain traceable to these facts. Do not print this analysis unless the user asks for it.
-8. Resolve and lock one source-specific copy package before generation. Share it verbatim across all selected modes by default, including `wallpaper-pack`, so wording does not drift between formats. If the user explicitly supplies per-mode copy settings, lock and honor those overrides separately. Use this priority: explicit text-free request > exact user wording > user creative direction or editable draft > source-derived copy. Resolve the target locale by the contract above before writing. A Japanese destination uses natural contemporary Japanese, appropriate kanji/kana balance and Japanese punctuation with kinsoku-aware phrase breaks; a Korean destination uses natural contemporary Korean, correct spacing and intact Hangul syllable blocks without decorative pseudo-Hanja; a UK destination uses British spelling, vocabulary, punctuation, date conventions, and culturally natural understatement rather than American wording. Apply the same native-register principle to every other locale. Preserve the semantic turn through transcreation instead of translating a pun or idiom word-for-word. Before writing direction-led or automatic copy, privately state one image-specific semantic core and choose one restrained rhetorical hinge—precise naming, contrast, understatement, double meaning, or reversal. Aim for quiet recognition: the title should make the viewer see the photograph differently and feel inseparable from it, never rely on a forced pun, slogan, generic inspiration, or unsupported story. Apply the swap test: if the same title could fit an unrelated photo without losing force, rewrite it. Exact user wording is semantic authority and stays verbatim; interpret its emphasis and phrase boundaries so hierarchy and line breaks strengthen rather than distort it. For a direction or editable draft, preserve the intended audience, tone, mandatory terms, and implied meaning while refining within the permission given; ask one concise question only when ambiguity would materially change the message, otherwise choose the most conservative faithful reading. For automatic or direction-led copy, record one main title and 2–4 finished microtext strings that form one semantic system rather than random labels. For custom copy, preserve the exact title, use every supplied microtext string, and derive supporting microtext only when the user did not request title-only. The title must be unmistakably larger than the microtext and readable at normal viewing size. Do not reuse one photo's copy for another unless explicitly requested.
-9. Run `scripts/compose_panel.py --plan` for every selected mode and its resolved dimensions. For selected `wallpaper-pack`, run four `design-only` plans, one for each resolved device size.
-10. For every selected paired mode, use the source photo unchanged in the source-adaptive frame: no crop, outpaint, stretch, or resampling is needed because the frame is exactly the source dimensions. Only when the user explicitly overrides that mode's canvas may a restrained crop or isolated environmental extension be used to fit that chosen frame; prefer extension whenever cropping would diminish the subject. Skip this step entirely in `design-only` and `wallpaper-pack`.
-11. Generate each distinct transformed geometric design alone at the planned design-frame aspect and preferably its exact size. When the image route cannot emit those exact pixels, use the closest supported size with the identical aspect and let the compositor resample proportionally without cropping. Use the full reference prompt plus the aesthetic motive lock, source observations, 4–6 colors, locked copy package, and the resolved mode block below. In `design-only`, this frame is the entire final canvas. For an `independent` wallpaper pack, generate all four device compositions separately from the original source. For a `linked` pack, generate the resolved anchor device first—iPad by default—from the original source, then open it and require it to pass the source-identity, aesthetic, copy, and safe-area gates before continuing. Generate each remaining device as a fresh target-size composition using both the original source and that same approved anchor.
-   Within the same current invocation, selected ordinary modes may reuse one newly approved transformed intermediate only when design-frame dimensions, aspect ratio, source facts, aesthetic instructions, and locked copy are identical; this is current-job reuse, never historical-output reuse. Otherwise generate each mode separately. Wallpaper assets are always generated separately.
-12. Keep every generation or edit call isolated to the current source photo. Selected ordinary modes and `independent` wallpaper calls receive only that source. A `linked` derivative receives exactly two image references: the original photo as content/identity evidence and the approved anchor as visual-family evidence for palette, geometric reduction, fine-line grammar, typography, negative-space rhythm, and subtle paper relief. All three derivatives point directly to the same anchor; never use phone → desktop → watch or any other sequential chain, because accumulated drift would replace the source logic. With the configured bridge, pass the two roles as repeated `--image` arguments. Normally this requires one design generation, or four design generations for `wallpaper-pack`, plus one photographic edit only in a paired mode when environmental extension is necessary.
-13. Use the script to compose or finalize every selected mode in menu order. For `wallpaper-pack`, finalize and dimension-audit all four files separately.
-14. Open and visually inspect every finalized image at normal view and thumbnail size; never infer aesthetic success from a completed generation call, valid dimensions, or a clean seam. Compare it with the source observations and aesthetic motive lock, then apply the acceptance gate. In a `linked` pack, inspect and approve the anchor before fan-out; never propagate a failed anchor. When a hard invariant is broken—including generic or source-independent geometry, loss of the principal subject/relationship, cold or saturated palette drift, obvious 3D depth, generic copy that fails the swap test, distorted user intent, a missing/weak title hierarchy, visible source photo in a source-hidden mode, unsafe wallpaper composition, or linked-family drift—retry only the faulty generated asset once, then finalize, reopen, and recheck. After one failed correction, return the best result and explicitly name the unresolved issue instead of silently presenting it as successful.
-15. Return the finished artworks in source order, then menu order 1→4, with absolute saved paths. A wallpaper pack returns phone, iPad, desktop, then watch. Apart from a necessary failure note, do not add design analysis, title candidates, or parameter lists.
+## Complete-canvas generation payload
 
-## Generation payload and composition commands
-
-Use the same deterministic script for every canvas. `wallpaper-pack` is a skill-level batch of four `design-only` canvases, not a fourth split layout inside the script. The selected wallpaper relationship changes the generation references, not the output count or finalization commands:
-
-For multi-select, run the applicable command block once per selected mode and save each result in its own sibling task directory. `all` / `全部` means the three ordinary results plus four wallpaper files—seven PNGs per source, never a combined overview.
-
-```bash
-# top-bottom: source-adaptive, exact horizontal seam
-scripts/compose_panel.py --plan --layout top-bottom --source photo.png
-scripts/compose_panel.py --source photo.png --design geometry.png \
-    --out ~/Desktop/xxd/xxd-panel-026/IMG_4821-top-bottom/IMG_4821.png --layout top-bottom
-
-# left-right: source-adaptive, exact vertical seam
-scripts/compose_panel.py --plan --layout left-right --source photo.png
-scripts/compose_panel.py --source photo.png --design geometry.png \
-    --out ~/Desktop/xxd/xxd-panel-026/IMG_4821-left-right/IMG_4821-lr.png --layout left-right
-
-# design-only: source-adaptive ratio and dimensions; no visible photo or seam
-scripts/compose_panel.py --source photo.png --design geometry.png \
-    --out ~/Desktop/xxd/xxd-panel-026/IMG_4821-design-only/IMG_4821-design.png \
-    --layout design-only
-
-# wallpaper-pack: four separately generated assets, finalized separately
-scripts/compose_panel.py --design phone.png --out ~/Desktop/xxd/xxd-panel-026/IMG_4821-wallpaper-pack/IMG_4821-wallpaper-phone.png --layout design-only --size 1440x3200
-scripts/compose_panel.py --design ipad.png --out ~/Desktop/xxd/xxd-panel-026/IMG_4821-wallpaper-pack/IMG_4821-wallpaper-ipad.png --layout design-only --size 2048x2732
-scripts/compose_panel.py --design desktop.png --out ~/Desktop/xxd/xxd-panel-026/IMG_4821-wallpaper-pack/IMG_4821-wallpaper-desktop.png --layout design-only --size 3840x2160
-scripts/compose_panel.py --design watch.png --out ~/Desktop/xxd/xxd-panel-026/IMG_4821-wallpaper-pack/IMG_4821-wallpaper-watch.png --layout design-only --size 1024x1024
-```
-
-`--size WIDTHxHEIGHT` has priority over `--canvas` and `--width`. With neither `--size` nor `--canvas`, `--source` activates source-adaptive sizing and no stock ratio is imposed. Legacy `--top` and `--bottom` remain aliases for `--source` and `--design`.
-
-**Photographic panel.** In `top-bottom`, it fills the upper half; in `left-right`, it fills the left half. Under source adaptation, paste it unchanged with no crop or resampling. Only for an explicit canvas override, crop gently or extend only the environment when necessary. `--anchor top|center|bottom|left|right` selects what a residual crop keeps. `design-only` has no photographic panel.
-
-**Transformed geometric design.** Generate it alone for the exact aspect reported by `--plan`, preferably at the exact frame size; otherwise use a closest supported same-aspect size and resample proportionally without cropping, with no photograph and no unused placeholder space. Append this resolved mode block:
+Append one resolved block to the style prompt for each output:
 
 ```text
 OUTPUT MODE: TOP_BOTTOM | LEFT_RIGHT | DESIGN_ONLY | WALLPAPER_PACK
 DEVICE PROFILE: NONE | PHONE | IPAD | DESKTOP | WATCH
-FINAL SIZE: <exact WIDTHxHEIGHT>
-DESIGN FRAME: <exact WIDTHxHEIGHT>
-SOURCE VISIBILITY: UPPER PANEL | LEFT PANEL | REFERENCE ONLY — NOT VISIBLE
-LAYOUT RULE: Fill the design frame completely. Render no extra photographic panel, seam, frame, or reserved blank area inside the design image.
-WALLPAPER RULE: For a device profile, keep system-UI zones low-information, keep essential content inside the safe region, render no fake clock/icons/dock/controls, and recompose for this aspect ratio rather than cropping another device's artwork.
+FINAL CANVAS: <whole finished ratio and/or exact WIDTHxHEIGHT>
+GENERATION STRATEGY: SINGLE COMPLETE CANVAS
+REFERENCE ROLE: SOURCE — HIGH-FIDELITY CONTENT AND IDENTITY ANCHOR
+SOURCE VISIBILITY: UPPER 50% | LEFT 50% | REFERENCE ONLY — NOT VISIBLE
+LAYOUT RULE:
+- Produce one finished poster in one image.
+- TOP_BOTTOM keeps a faithful photographic source in the upper half and creates the transformed design in the lower half.
+- LEFT_RIGHT keeps a faithful photographic source in the left half and creates the transformed design in the right half.
+- DESIGN_ONLY and WALLPAPER_PACK use the whole canvas for the transformed design and show no source photograph or reserved panel.
+- Keep paired regions approximately equal while unifying colour, light, rhythm, typography, and meaning.
+- Do not output separate panels, a contact sheet, a mockup, or an empty placeholder.
 WALLPAPER RELATIONSHIP: NONE | INDEPENDENT | LINKED
-ANCHOR DEVICE: NONE | PHONE | IPAD | DESKTOP | WATCH
-REFERENCE ROLE: SOURCE ONLY | SOURCE CONTENT + ANCHOR VISUAL DNA
+ANCHOR DEVICE: NONE | IPAD
 ```
 
-For `linked`, the anchor receives `WALLPAPER RELATIONSHIP: LINKED`, its resolved device, and `REFERENCE ROLE: SOURCE ONLY`. Every derivative receives the same relationship and anchor device but `REFERENCE ROLE: SOURCE CONTENT + ANCHOR VISUAL DNA`. The original photo remains authoritative for subject, posture, relationship, and source colors; the anchor governs family resemblance only. Repeat the full aesthetic prompt and locked copy package for every derivative—do not rely on the anchor pixels to preserve correct wording. Recompose geometry and safe areas for the target device rather than copying coordinates from the anchor.
-
-Then append the locked copy package:
+For text output append:
 
 ```text
 COPY MODE: REQUIRED
 COPY ORIGIN: USER_EXACT | USER_DIRECTION | SOURCE_DERIVED
-COPY LOCALE: <resolved locale, such as ar | ja-JP | ko-KR | en-GB | zh-CN>
-COPY INTENT — INSTRUCTION ONLY, NEVER RENDER: <one concise semantic core and intended emotional turn>
-MAIN TITLE: <locked exact string>
-MICROTEXT 1: <locked exact string>
-MICROTEXT 2: <locked exact string>
-MICROTEXT 3: <optional locked exact string>
-MICROTEXT 4: <optional locked exact string>
-COPY RULE: Render only MAIN TITLE and populated MICROTEXT strings, each exactly once. COPY ORIGIN, COPY LOCALE, and COPY INTENT are instructions, never visible text. Do not rewrite, translate, spell-correct, duplicate, or add text. Respect the resolved locale's script shaping, punctuation, spacing, and semantic line-breaking rules.
+COPY LOCALE: <resolved locale>
+COPY PAYLOAD: <the exact 026-specific title and supporting-text package resolved under the local production prompt>
+COPY RULE: Render only the populated strings in COPY PAYLOAD, each exactly once. Do not rewrite, translate, spell-correct, duplicate, or add text. Use native shaping, direction, punctuation, spacing, and semantic line breaks. Preserve the 026-specific hierarchy, amount of supporting text, placement, material, and typographic role instead of applying a generic overlay.
 ```
 
-Remove unused optional lines rather than rendering placeholders. When the resolved preflight choice is text-free, replace the entire block with `COPY MODE: NONE — render no text or pseudo-text anywhere.`
+For text-free output append only `COPY MODE: NONE — render no text or pseudo-text anywhere.`
 
-**Wallpaper safe regions.** Phone keeps the clock/notch area at the top and controls at the bottom quiet. iPad keeps essential content inside a centered square that survives portrait/landscape crop, with extendable atmosphere outside it. Desktop keeps the top menu area, bottom dock/taskbar, and both icon edges low-information. Watch keeps the main subject and a simplified but visible title hierarchy readable at thumbnail size while reserving the major clock/complication area; safe-area adaptation may enlarge or reposition type, never delete it. Preserve the 026 identity through fewer, larger warm geometric shapes, clear contour evidence, quiet space, and restrained relief rather than generic icons or extra detail.
+## Composition fallback only
 
-**Finalize.** Paired modes place the two assets into exact equal frames. Under source adaptation, both frames already equal the original source dimensions, so the source is pasted without cropping and the generated asset should use the same aspect and preferably that exact size; a same-aspect supported size may be proportionally resampled. `design-only` uses the source-derived frame without adding a source panel. The script reports any mismatch that would cause a crop so the asset can be regenerated at the planned aspect instead.
+`scripts/compose_panel.py` remains available for deterministic recovery and audit. Trigger it only under step 11. When used, generate a same-aspect design asset from the full 026 prompt, preserve the source without destructive crop or stretch, and document which fallback condition applied. A direct complete-canvas success must not be split and recomposed again.
 
-Needs Pillow. If the default interpreter lacks it, run `/opt/homebrew/bin/python3 scripts/compose_panel.py ...`.
+```bash
+# Read-only audit after direct generation
+python3 scripts/compose_panel.py --audit final.png --layout top-bottom --size WIDTHxHEIGHT
 
-Audit with the same mode used to build the artwork: `--audit poster.png --layout top-bottom`, `--audit poster.png --layout left-right`, or `--audit artwork.png --layout design-only --size 2048x2048`.
-
-Only when no local scripting is available, fall back to one whole-canvas call. State the exact mode, dimensions, panel order, and seam coordinate. Verify paired-mode offsets with `--audit` and treat an offset above 0.25% as a failure.
+# Deterministic fallback after the complete-canvas retry has failed
+python3 scripts/compose_panel.py --source photo.png --design design.png \
+  --out final.png --layout top-bottom --size WIDTHxHEIGHT
+```
 
 ## Output location
 
@@ -232,8 +193,8 @@ Save every generated poster under `~/Desktop/xxd/xxd-panel-026/`. Create the sha
 
 Before accepting each result, verify all of the following:
 
-- The output mode and dimensions match the resolved explicit selection or source-adaptive formula. `--size` is reproduced pixel-for-pixel. In source-adaptive modes, the source is never cropped and the generated asset either matches the planned frame natively or is proportionally resampled from the same aspect with no crop.
-- `top-bottom` has a clean horizontal seam at exactly half height; `left-right` has a clean vertical seam at exactly half width; `design-only` and all wallpaper files contain no seam or visible source photo.
+- The output mode and dimensions match the resolved explicit selection or explicit final-canvas ratio or pixels. `--size` is reproduced pixel-for-pixel. When the user explicitly chooses source aspect, the source is never cropped and the generated asset either matches the planned frame natively or is proportionally resampled from the same aspect with no crop.
+- `top-bottom` has a clean near-central horizontal relationship; `left-right` has a clean near-central vertical relationship; `design-only` and all wallpaper files contain no seam or visible source photo.
 - In paired modes, the photographic panel remains recognizably the original source, appears in the correct upper/left position, and contains no deformation or typography.
 - The transformed region depicts the same key subject and relationship through simplified silhouette, gentle geometric planes, fine contour/structural lines, and source-specific spacing.
 - Automatic or direction-led copy expresses a visible fact plus a grounded relational or latent meaning, passes the unrelated-photo swap test, and earns its emotional turn without a forced pun or invented backstory. Its language matches the resolved target locale rather than the command language or presumed identity: Arabic reads as native Arabic with connected shaping and RTL composition, Japanese as native Japanese, Korean as native Korean, and UK English uses British conventions. Exact user copy remains verbatim and its hierarchy, script shaping, punctuation, line breaks, and placement preserve the intended emphasis; editable user direction is transcreated only within the permission given.
@@ -251,9 +212,9 @@ Before accepting each result, verify all of the following:
 
 Preserve user-specified subject wording, output count, target locale, and language. Copy priority is explicit text-free request > exact supplied wording > supplied creative direction > automatic source-derived copy. Target-locale priority is explicit audience/market > explicit output language > direction language; if none is explicit, ask before generation. Treat exact wording as immutable unless the user asks for rewriting or localization. Apply a shared creative direction across a batch when requested, but still write a distinct source-aware copy package for each photo unless the user explicitly requests identical wording.
 
-A user-forced mode set and per-mode exact pixel sizes are always honored. Exact size overrides ratio; ratio overrides source-adaptive sizing. Canvas orientation never changes any selected mode: `top-bottom` always stacks vertically, `left-right` always places source left and design right, and source-hidden modes never reintroduce the photograph. In `wallpaper-pack`, a labeled device size overrides only that device. If a paired frame fights the source orientation, protect the subject with seamless environmental extension rather than stretching it.
+A user-forced mode set and per-mode exact pixel sizes are always honored. Exact size takes precedence over an explicitly chosen ratio; neither may be inferred silently. Canvas orientation never changes any selected mode: `top-bottom` always stacks vertically, `left-right` always places source left and design right, and source-hidden modes never reintroduce the photograph. In `wallpaper-pack`, a labeled device size overrides only that device. If a paired frame fights the source orientation, protect the subject with seamless environmental extension rather than stretching it.
 
-Do not relax the one-photo-per-selected-ordinary-mode rule, exact four-output rule in `wallpaper-pack`, exact equal split in paired modes, absence of the photo in source-hidden modes, faithful visible photography, or the photo-derived humanist geometry unless the user explicitly asks to leave the 026 style.
+Do not relax the one-photo-per-selected-ordinary-mode rule, exact four-output rule in `wallpaper-pack`, the paired-mode relationship and any explicitly requested exact split, absence of the photo in source-hidden modes, faithful visible photography, or the photo-derived humanist geometry unless the user explicitly asks to leave the 026 style.
 
 ## Provenance boundary
 
