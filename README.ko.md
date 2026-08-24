@@ -22,6 +22,23 @@ XXD Panel 026은 Codex와 호환 에이전트를 위한 이미지 생성 Skill�
 
 사진 위에 저채도 필터를 씌우는 작업이 아닙니다. 왜 이 사진이 주목받을 가치가 있는지를 보존합니다.
 
+## X에서 가져온 예시
+
+> [Xiaoxiaodong (@xiaoxiaodong01)](https://x.com/xiaoxiaodong01/status/2090433161096581434) · 2026년 8월 20일<br>
+> GPT2 × 부조 × 크롭 × 절제 × 미학 프롬프트 × VOL.026<br>
+> 사진을 그대로 다시 그리지 않습니다. 중요한 것을 찾아 몇 개의 선과 색면으로 줄이면서도 한눈에 알아볼 수 있게 합니다.
+
+<table>
+  <tr>
+    <td width="50%"><a href="https://x.com/xiaoxiaodong01/status/2090433161096581434"><img src="./assets/examples/sample-01.jpg" alt="XXD Panel 026 예시 1"></a></td>
+    <td width="50%"><a href="https://x.com/xiaoxiaodong01/status/2090433161096581434"><img src="./assets/examples/sample-02.jpg" alt="XXD Panel 026 예시 2"></a></td>
+  </tr>
+</table>
+
+<p align="center"><a href="https://x.com/xiaoxiaodong01/status/2090433161096581434">원문 게시물과 전체 프롬프트 보기 →</a></p>
+
+이 예시들은 026의 미학적 동기를 보여 줄 뿐, 게시물에서 사용한 과거 캔버스를 현재의 기본 크기로 만들지 않습니다. 네 모드는 계속해서 아래의 생성 전 화면비 확인 및 사용자 지정 크기 규칙을 따릅니다.
+
 ## 왜 만들었나요
 
 많은 ‘사진을 미니멀 포스터로’ 만드는 워크플로는 같은 원, 파스텔 색면, 건축적 선으로 끝납니다. 결과는 차분해 보이지만 원본과 거의 관계가 없습니다. 몸짓은 사라지고, 관계는 템플릿으로 대체되며, 제목은 전혀 다른 이미지에도 그대로 붙일 수 있습니다.
@@ -43,23 +60,6 @@ XXD Panel 026은 Codex와 호환 에이전트를 위한 이미지 생성 Skill�
 피사체는 유일한 시각 중심으로 남습니다. 구성은 중앙으로 모이되 딱딱한 대칭이 되지 않습니다. 양형과 음형, 조절된 밀도, 작은 어긋남, 넉넉한 고요한 공간이 리듬을 만듭니다. 형태는 인터페이스 속 카드처럼 떠 있는 대신 고운 종이에서 살짝 눌러 만든 듯해야 합니다.
 
 색은 아이보리, 웜 화이트, 옅은 회색, 모래색, 더스티 핑크, 옅은 황토, 안개 낀 파랑, 세이지 쪽으로 이동할 수 있습니다. 이는 프리셋이 아니라 방향입니다. 주조색, 보조색, 구조색은 반드시 현재 사진의 빛, 재료, 분위기로 설명할 수 있어야 합니다.
-
-## X에서 가져온 예시
-
-> [Xiaoxiaodong (@xiaoxiaodong01)](https://x.com/xiaoxiaodong01/status/2090433161096581434) · 2026년 8월 20일<br>
-> GPT2 × 부조 × 크롭 × 절제 × 미학 프롬프트 × VOL.026<br>
-> 사진을 그대로 다시 그리지 않습니다. 중요한 것을 찾아 몇 개의 선과 색면으로 줄이면서도 한눈에 알아볼 수 있게 합니다.
-
-<table>
-  <tr>
-    <td width="50%"><a href="https://x.com/xiaoxiaodong01/status/2090433161096581434"><img src="./assets/examples/sample-01.jpg" alt="XXD Panel 026 예시 1"></a></td>
-    <td width="50%"><a href="https://x.com/xiaoxiaodong01/status/2090433161096581434"><img src="./assets/examples/sample-02.jpg" alt="XXD Panel 026 예시 2"></a></td>
-  </tr>
-</table>
-
-<p align="center"><a href="https://x.com/xiaoxiaodong01/status/2090433161096581434">원문 게시물과 전체 프롬프트 보기 →</a></p>
-
-이 예시들은 026의 미학적 동기를 보여 줄 뿐, 게시물에서 사용한 과거 캔버스를 현재의 기본 크기로 만들지 않습니다. 네 모드는 계속해서 아래의 생성 전 화면비 확인 및 사용자 지정 크기 규칙을 따릅니다.
 
 ## 원본 프롬프트가 유일한 미적 기준입니다
 

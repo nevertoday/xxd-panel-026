@@ -22,6 +22,23 @@ XXD Panel 026 is an image-generation skill for Codex and compatible agents. It r
 
 It does not place a muted-colour filter over a photo. It preserves why that particular photograph deserves attention.
 
+## Samples · from X
+
+> [Xiaoxiaodong (@xiaoxiaodong01)](https://x.com/xiaoxiaodong01/status/2090433161096581434) · 20 August 2026<br>
+> GPT2 × relief × crop × restraint × aesthetic prompt × VOL.026<br>
+> It does not redraw the photograph. It finds what matters, reduces the scene to a few lines and colour planes, and still remains immediately recognisable.
+
+<table>
+  <tr>
+    <td width="50%"><a href="https://x.com/xiaoxiaodong01/status/2090433161096581434"><img src="./assets/examples/sample-01.jpg" alt="XXD Panel 026 sample 1"></a></td>
+    <td width="50%"><a href="https://x.com/xiaoxiaodong01/status/2090433161096581434"><img src="./assets/examples/sample-02.jpg" alt="XXD Panel 026 sample 2"></a></td>
+  </tr>
+</table>
+
+<p align="center"><a href="https://x.com/xiaoxiaodong01/status/2090433161096581434">View the original post and full prompt →</a></p>
+
+These samples demonstrate the 026 aesthetic motive; they do not turn the post's earlier canvas into a current default. The four modes still follow the explicit pre-generation canvas and custom sizing logic below.
+
 ## Why it exists
 
 Many “photo to minimal poster” workflows end with the same circles, pastel blocks, and architectural lines. The result may look calm, yet have almost nothing to do with the source. Gesture disappears, relationships are replaced by a template, and the same title could survive a completely different image.
@@ -43,23 +60,6 @@ The internal method is:
 The subject remains the sole visual core. The composition tends towards the centre without becoming rigidly symmetrical; positive and negative shape, measured density, small offsets, and generous quiet space create the rhythm. Forms should feel lightly pressed out of fine paper, not like cards floating inside an interface.
 
 Colours may move towards ivory, warm white, pale grey, sand, dusty pink, pale ochre, mist blue, or sage. These are directions, not presets. The principal, supporting, and structural colours must remain explainable through the current photograph's light, material, or atmosphere.
-
-## Samples · from X
-
-> [Xiaoxiaodong (@xiaoxiaodong01)](https://x.com/xiaoxiaodong01/status/2090433161096581434) · 20 August 2026<br>
-> GPT2 × relief × crop × restraint × aesthetic prompt × VOL.026<br>
-> It does not redraw the photograph. It finds what matters, reduces the scene to a few lines and colour planes, and still remains immediately recognisable.
-
-<table>
-  <tr>
-    <td width="50%"><a href="https://x.com/xiaoxiaodong01/status/2090433161096581434"><img src="./assets/examples/sample-01.jpg" alt="XXD Panel 026 sample 1"></a></td>
-    <td width="50%"><a href="https://x.com/xiaoxiaodong01/status/2090433161096581434"><img src="./assets/examples/sample-02.jpg" alt="XXD Panel 026 sample 2"></a></td>
-  </tr>
-</table>
-
-<p align="center"><a href="https://x.com/xiaoxiaodong01/status/2090433161096581434">View the original post and full prompt →</a></p>
-
-These samples demonstrate the 026 aesthetic motive; they do not turn the post's earlier canvas into a current default. The four modes still follow the explicit pre-generation canvas and custom sizing logic below.
 
 ## The original brief is authoritative
 

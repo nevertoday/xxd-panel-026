@@ -22,6 +22,23 @@ XXD Panel 026 は、Codex と互換 Agent のための画像生成 Skill です�
 
 写真に「くすみ色のフィルター」を重ねる仕組みではありません。その一枚を見る理由を、静かな造形として残すための Skill です。
 
+## 作例 · X より
+
+> [Xiaoxiaodong（@xiaoxiaodong01）](https://x.com/xiaoxiaodong01/status/2090433161096581434) · 2026年8月20日<br>
+> GPT2 × レリーフ × クロップ × 静けさ × 美学プロンプト × VOL.026<br>
+> 写真を描き直すのではなく、面白さの核を拾い、数本の線と色面まで静かに削ぎ落としても、一目で元の場面だと分かる表現です。
+
+<table>
+  <tr>
+    <td width="50%"><a href="https://x.com/xiaoxiaodong01/status/2090433161096581434"><img src="./assets/examples/sample-01.jpg" alt="XXD Panel 026 作例 1"></a></td>
+    <td width="50%"><a href="https://x.com/xiaoxiaodong01/status/2090433161096581434"><img src="./assets/examples/sample-02.jpg" alt="XXD Panel 026 作例 2"></a></td>
+  </tr>
+</table>
+
+<p align="center"><a href="https://x.com/xiaoxiaodong01/status/2090433161096581434">元の投稿と完全なプロンプトを見る →</a></p>
+
+これらは 026 の美学的動機を示す作例です。投稿当時の画面比率を現在の既定値にはしません。4つのモードは、以下の生成前に画角を明示するカスタムサイズ方針に従います。
+
 ## なぜ、この Skill が必要なのか
 
 「写真をミニマルなポスターにする」と、同じ円、淡い色面、建築図面風の線だけが残りがちです。落ち着いて見えても、元の写真との結びつきは弱い。動きや関係はテンプレートへ置き換わり、別の写真でも同じ図形と見出しが使えてしまいます。
@@ -43,23 +60,6 @@ XXD Panel 026 は、Codex と互換 Agent のための画像生成 Skill です�
 視覚の中心は、あくまで被写体ひとつです。構図はおおむね中央へ寄せつつ、硬い左右対称にはしません。正負形、密度差、わずかなずれ、大きな余白でリズムをつくります。形は UI 上に浮くカードではなく、上質な紙からそっと押し出されたように見えるのが理想です。
 
 色はアイボリー、暖白、淡いグレー、砂色、くすんだピンク、淡い黄土、霧がかった青、セージグリーンへ寄せることがあります。ただし、これは固定パレットではありません。主色、補助色、構造色は、必ずその写真の光、素材、空気から説明できる必要があります。
-
-## 作例 · X より
-
-> [Xiaoxiaodong（@xiaoxiaodong01）](https://x.com/xiaoxiaodong01/status/2090433161096581434) · 2026年8月20日<br>
-> GPT2 × レリーフ × クロップ × 静けさ × 美学プロンプト × VOL.026<br>
-> 写真を描き直すのではなく、面白さの核を拾い、数本の線と色面まで静かに削ぎ落としても、一目で元の場面だと分かる表現です。
-
-<table>
-  <tr>
-    <td width="50%"><a href="https://x.com/xiaoxiaodong01/status/2090433161096581434"><img src="./assets/examples/sample-01.jpg" alt="XXD Panel 026 作例 1"></a></td>
-    <td width="50%"><a href="https://x.com/xiaoxiaodong01/status/2090433161096581434"><img src="./assets/examples/sample-02.jpg" alt="XXD Panel 026 作例 2"></a></td>
-  </tr>
-</table>
-
-<p align="center"><a href="https://x.com/xiaoxiaodong01/status/2090433161096581434">元の投稿と完全なプロンプトを見る →</a></p>
-
-これらは 026 の美学的動機を示す作例です。投稿当時の画面比率を現在の既定値にはしません。4つのモードは、以下の生成前に画角を明示するカスタムサイズ方針に従います。
 
 ## 原文プロンプトを唯一の美的基準にする
 
