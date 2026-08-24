@@ -8,9 +8,17 @@
 - `FINAL CANVAS` means the ratio/pixels of the whole finished artwork and must be explicitly resolved before generation; never apply source dimensions silently. `DESIGN FRAME` is used only if a failed complete-canvas retry triggers deterministic composition fallback.
 - Retry a failed complete canvas once against the failed constraint only. Scripted composition is allowed only after that retry still fails, when pixel-identical source preservation is explicitly required, when the active route cannot realise the canvas, or for lossless pixel calibration.
 
+### Model priority and credentials
+
+- **Prefer GPT Image 2.** When GPT Image 2 is available through the current built-in image tool or a configured compatible route, use it first for the high-fidelity reference/edit and complete-canvas generation required by this prompt.
+- Also support Seedance 5.0 Pro, Nano Banana Pro (Gemini Image Pro), Nano Banana 2 (Gemini Image Flash), or another compatible bitmap model only when the actual route can preserve the source, realise the whole finished canvas, render the target-language text, and accept the multiple references needed by a linked wallpaper pack.
+- An alternative model changes only the generation route. It must not change this prompt's modes, canvas, source visibility, copy, locale, wallpaper relationship, or complete-canvas-first / composition-fallback-only logic. Do not silently downgrade a hard requirement.
+- If no suitable route is available, ask the user to enable an image-generation tool or provide an API key. User-provided credentials may be used for the current task, but never echo, display, log, or expose their value in chat, prompts, or diagnostics. Do not persist them or modify global route configuration unless explicitly requested.
+- Judge availability by actual image capability, not by a provider name or one missing environment variable.
+
 Treat the selected uploaded photograph as the sole content source. Each selected ordinary mode creates one finished premium editorial artwork for this photograph; selected wallpaper-pack creates four separate device wallpaper files under a caller-locked `INDEPENDENT` or `LINKED` relationship. Never combine them with another photo or turn any outputs into one overview, grid, collage, or series sheet.
 
-Use one or more modes locked in section 7: photograph above and humanist geometry below, photograph left and humanist geometry right, one transformed design filling the canvas, and/or four separately recomposed device wallpapers. Each paired mode stays exact 50/50; source-hidden modes have no photographic region or seam. Before any generation call, explicitly resolve automatic copy, custom copy, or text-free output; automatic and custom copy also require a target language or locale.
+Use one or more modes locked in section 7: photograph above and humanist geometry below, photograph left and humanist geometry right, one transformed design filling the canvas, and/or four separately recomposed device wallpapers. Each paired mode is an evenly divided two-panel composition — stacked or side by side — with the two panels visually about equal. Minor deviation is acceptable unless the user explicitly requires pixel-exact halves; source-hidden modes have no photographic region or seam. Before any generation call, explicitly resolve automatic copy, custom copy, or text-free output; automatic and custom copy also require a target language or locale.
 
 The **transformed design frame** means the lower panel in top-bottom, the right panel in left-right, and the full canvas in design-only or each wallpaper output.
 
@@ -177,7 +185,7 @@ Lock one or more modes before generation; when the caller provides none, ask bef
 3. **DESIGN_ONLY:** use the source only as content and identity evidence; let the humanist-geometric design fill the confirmed whole canvas with no visible source or reserved panel.
 4. **WALLPAPER_PACK:** one source produces four separate transformed wallpapers—phone, iPad, desktop, and watch—with no visible source photo. Copy follows the preflight choice of automatic, custom, or text-free output. Also lock an `INDEPENDENT` or `LINKED` wallpaper relationship.
 
-User intent selects the mode; canvas orientation must not silently change it. Paired modes stay exact 50/50. Source-hidden modes must not reintroduce the source, a seam, or reserved placeholder space. Wallpaper-pack recomposes every device separately; never mechanically crop or resize one wallpaper into another.
+User intent selects the mode; canvas orientation must not silently change it. Paired modes read as an evenly divided two-panel composition — stacked panels for top-bottom, side-by-side panels for left-right — with the two panels visually about equal. Minor deviation is acceptable unless the user explicitly requires pixel-exact halves. Source-hidden modes must not reintroduce the source, a seam, or reserved placeholder space. Wallpaper-pack recomposes every device separately; never mechanically crop or resize one wallpaper into another.
 
 Wallpaper relationship has two values:
 
