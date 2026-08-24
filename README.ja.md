@@ -235,7 +235,7 @@ XXD は Xiaoxiaodong のブランド名を略したものです。このプロ�
 
 Skills の利用に関する 1 対 1 の深度相談は、1 時間あたり CNY 299 です。予約は、以下の WeChat QR コードから Xiaoxiaodong へご連絡ください。
 
-### Xiaoxiaodong Skills ユーザー交流グループ｜参加費 CNY 99
+### Xiaoxiaodong Skills ユーザー交流グループ｜参加費 CNY 168
 
 一度の支払いで、使い方や制作事例の共有、メンバー同士の情報交換を行うユーザーグループに参加できます。時間制の 1 対 1 深度相談は含まれません。以下の WeChat QR コードから「Skills ユーザーグループ」と添えてご連絡ください。
 
