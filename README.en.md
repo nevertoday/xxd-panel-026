@@ -88,6 +88,18 @@ Copy language follows the intended audience rather than any guess based on appea
 
 A Japanese edition uses natural Japanese, a Korean edition natural Korean, a UK edition British English, and an Arabic edition natural Modern Standard Arabic with correct shaping and right-to-left composition. Every locale is transcreated natively rather than translated literally or decorated with pseudo-foreign text.
 
+## Selectable controls and inline parameters
+
+When the host provides genuine interactive controls, the Skill prefers card-style selection: output modes and ordinary output sizes are multi-select, while copy mode and wallpaper relationship are single-select. Size choices include auto-fit, source aspect, 1:1, 3:4, 4:3, 4:5, 5:4, 2:3, 3:2, 9:16, 16:9, 21:9, 5:7, 7:5, and custom ratios or pixels. Without an interactive control, it falls back to a clear multiline numbered menu rather than showing fake checkboxes.
+
+Every setting can also be supplied as an inline variable:
+
+```text
+/xxd-panel-026 photo.jpg --mode top-bottom,design-only --size auto,3:4,9:16 --text auto --locale ja-JP
+```
+
+Supported parameters include `--mode`, repeatable or comma-separated `--size`, `--text auto|custom|none`, `--locale`, `--copy`, `--wallpaper linked|independent`, `--wallpaper-size`, and `--out`. Complete parameters skip all preflight questions; partial parameters trigger only the missing questions. Different aspect ratios are independently recomposed, and the four-device wallpaper pack remains a separate branch rather than being multiplied by ordinary sizes.
+
 ## Image-model priority
 
 GPT Image 2 is the default first choice. It keeps this project's established workflow: high-fidelity source reference, explicit whole-canvas selection before generation, one complete-canvas generation for paired modes, and scripted composition only as a conditional fallback.
