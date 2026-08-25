@@ -16,17 +16,7 @@
 
 </div>
 
-> RECOGNISE QUIETLY · REDUCE GENTLY · LET THE PAPER BREATHE
-
-XXD Panel 026 是一个面向 Codex 与兼容 Agent 的图像生成 Skill。它先读懂照片中的主体、轮廓、姿态、结构轴线、距离和叙事关系，再把这些事实转译为极简几何、细线、柔和色组与浅浅纸面浮雕。
-
-它不是给照片套一层“莫兰迪滤镜”。它要留下照片为什么值得被看见。
-
 ## 样张 · 来自 X
-
-> [小小东（@xiaoxiaodong01）](https://x.com/xiaoxiaodong01/status/2090433161096581434) · 2026 年 8 月 20 日<br>
-> GPT2 × 浮雕 × 裁剪 × 冷静 × 美学提示词 × VOL.026<br>
-> 它不是把照片再画一遍，而是抓住最有意思的部分重新表达：慢慢减到几根线和几个色块，仍然一眼能够认出。
 
 <table>
   <tr>
@@ -35,9 +25,19 @@ XXD Panel 026 是一个面向 Codex 与兼容 Agent 的图像生成 Skill。它�
   </tr>
 </table>
 
+> [小小东（@xiaoxiaodong01）](https://x.com/xiaoxiaodong01/status/2090433161096581434) · 2026 年 8 月 20 日<br>
+> GPT2 × 浮雕 × 裁剪 × 冷静 × 美学提示词 × VOL.026<br>
+> 它不是把照片再画一遍，而是抓住最有意思的部分重新表达：慢慢减到几根线和几个色块，仍然一眼能够认出。
+
 <p align="center"><a href="https://x.com/xiaoxiaodong01/status/2090433161096581434">查看原推文与完整提示词 →</a></p>
 
 这些样张用于展示 026 的美学动机，不会把推文中的旧画幅写成当前 Skill 的默认尺寸；当前四种模式仍遵循下方的生成前明确画幅与自定义尺寸逻辑。
+
+> RECOGNISE QUIETLY · REDUCE GENTLY · LET THE PAPER BREATHE
+
+XXD Panel 026 是一个面向 Codex 与兼容 Agent 的图像生成 Skill。它先读懂照片中的主体、轮廓、姿态、结构轴线、距离和叙事关系，再把这些事实转译为极简几何、细线、柔和色组与浅浅纸面浮雕。
+
+它不是给照片套一层“莫兰迪滤镜”。它要留下照片为什么值得被看见。
 
 <!-- xxd-panel-benefit:start -->
 ## 快速判断：XXD Panel 026 适合你吗？
