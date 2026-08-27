@@ -16,12 +16,42 @@
 
 </div>
 
+<!-- xxd-human-intro:start -->
+## まず、ひとことで
+
+気に入っている写真を AI に渡したら、どこかで見たような「AI デザイン」になってしまったことはありませんか。被写体は残っていても、その写真らしい関係や空気、小さな手がかりが消えてしまう。
+
+その違和感から **Panel 026** を作りました。テンプレートを被せるのではなく、写真から失ってはいけないものを見つけ、**写真に宿る事実を、静かでやわらかく、それでもひと目で分かる幾何学へ**へ翻訳します。
+
+### 30秒でわかること
+
+- **渡すもの：** 写真1枚、画像フォルダー、または大まかなアイデア。
+- **すること：** 人物・物・動き・関係を保ち、この Panel 固有の視覚言語で再設計。
+- **受け取るもの：** すぐ使える PNG。比較、デザインのみ、複数比率、壁紙一式にも対応。
+
+### いちばん簡単な試し方
+
+最初から全設定を読む必要はありません。画像を Agent に渡して、こう伝えてください。
+
+> XXD Panel 026 でこの画像を処理して、まず最適な構図とサイズを提案して。
+
+雰囲気を確かめたいなら下の作例へ。すぐ作るなら [使い始める](#使い始める) へ。全モードと引数は、必要なときだけ開ける資料にまとめました。
+<!-- xxd-human-intro:end -->
+
 ## 作例 · X より
 
 <table>
   <tr>
     <td width="50%"><a href="https://x.com/xiaoxiaodong01/status/2090433161096581434"><img src="./assets/examples/sample-01.jpg" alt="XXD Panel 026 作例 1"></a></td>
     <td width="50%"><a href="https://x.com/xiaoxiaodong01/status/2090433161096581434"><img src="./assets/examples/sample-02.jpg" alt="XXD Panel 026 作例 2"></a></td>
+  </tr>
+  <tr>
+    <td colspan="2"><img src="./assets/examples/sample-05.png" alt="XXD Panel 026 作例 5"></td>
+  </tr>
+  <tr>
+    <td width="33%"><img src="./assets/examples/sample-06.png" alt="XXD Panel 026 作例 6"></td>
+    <td width="33%"><img src="./assets/examples/sample-07.png" alt="XXD Panel 026 作例 7"></td>
+    <td width="33%"><img src="./assets/examples/sample-08.png" alt="XXD Panel 026 作例 8"></td>
   </tr>
 </table>
 
