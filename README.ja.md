@@ -60,6 +60,21 @@
   </tr>
 </table>
 
+## 追加 3:4 上下構成作例
+
+上の 16:9 作例と同じ4点の独立素材を、完全な 3:4 上下構成として再生成しました。上部は現実の写真を保ち、下部は Panel 026 の原文プロンプトに従って再構成しています。英語コピーは各写真の内容・空気・含意だけから生成し、全点を個別に確認しました。
+
+<table>
+  <tr>
+    <td width="50%"><img src="./assets/examples/sample-09.png" alt="XXD Panel 026 追加上下作例 1"></td>
+    <td width="50%"><img src="./assets/examples/sample-10.png" alt="XXD Panel 026 追加上下作例 2"></td>
+  </tr>
+  <tr>
+    <td width="50%"><img src="./assets/examples/sample-11.png" alt="XXD Panel 026 追加上下作例 3"></td>
+    <td width="50%"><img src="./assets/examples/sample-12.png" alt="XXD Panel 026 追加上下作例 4"></td>
+  </tr>
+</table>
+
 > [Xiaoxiaodong（@xiaoxiaodong01）](https://x.com/xiaoxiaodong01/status/2090433161096581434) · 2026年8月20日<br>
 > GPT2 × レリーフ × クロップ × 静けさ × 美学プロンプト × VOL.026<br>
 > 写真を描き直すのではなく、面白さの核を拾い、数本の線と色面まで静かに削ぎ落としても、一目で元の場面だと分かる表現です。
