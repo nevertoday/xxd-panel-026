@@ -4,7 +4,7 @@
 
 <div align="center">
 
-# 🦁 XXD Panel 026
+# 🦁 XXD Panel 026｜几何秩序
 
 ### 把照片中的事实，转译成安静、温和、仍能一眼认出的几何秩序
 

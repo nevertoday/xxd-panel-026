@@ -4,7 +4,7 @@
 
 <div align="center">
 
-# 🦁 XXD Panel 026
+# 🦁 XXD Panel 026｜Geometric Order
 
 ### Translate photographic facts into quiet, gentle geometry that remains unmistakably recognisable
 
