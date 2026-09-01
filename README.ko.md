@@ -1,7 +1,3 @@
-<p align="center">
-  <img src="./assets/banner.svg" alt="XXD Panel 026 프로젝트 배너" width="1200">
-</p>
-
 <div align="center">
 
 # 🦁 XXD Panel 026｜기하학적 질서

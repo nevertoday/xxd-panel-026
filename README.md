@@ -1,7 +1,3 @@
-<p align="center">
-  <img src="./assets/banner.svg" alt="XXD Panel 026 项目介绍" width="1200">
-</p>
-
 <div align="center">
 
 # 🦁 XXD Panel 026｜几何秩序

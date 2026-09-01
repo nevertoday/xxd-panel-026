@@ -1,7 +1,3 @@
-<p align="center">
-  <img src="./assets/banner.svg" alt="لافتة مشروع XXD Panel 026" width="1200">
-</p>
-
 <div align="center" dir="rtl">
 
 # 🦁 XXD Panel 026｜نظام هندسي
