@@ -425,27 +425,6 @@ XXD 是小小东的品牌名缩写。本项目由 [@xiaoxiaodong01](https://x.co
 
 </div>
 
----
-
-<div align="center">
-  <h2>⚡ 算力赞助</h2>
-  <p>如果项目对你有帮助，愿意的话，可以用小小东本人的微信或支付宝赞赏码支持算力。</p>
-  <table>
-    <tr>
-      <td align="center" width="240">
-        <a href="https://colors.xiaoxiaodong.ai/docs/images/wechat-reward-qr.png"><img src="https://colors.xiaoxiaodong.ai/docs/images/wechat-reward-qr.png" alt="XXD 算力赞助微信收款码" height="220"></a><br>
-        <strong>微信</strong><br>
-        <sub>扫描二维码赞助算力</sub>
-      </td>
-      <td align="center" width="240">
-        <a href="https://colors.xiaoxiaodong.ai/docs/images/alipay-reward-qr.png"><img src="https://colors.xiaoxiaodong.ai/docs/images/alipay-reward-qr.png" alt="XXD 算力赞助支付宝收款码" height="220"></a><br>
-        <strong>支付宝</strong><br>
-        <sub>扫描二维码赞助算力</sub>
-      </td>
-    </tr>
-  </table>
-</div>
-
 ## 许可证
 
 本项目（包括 Skill、提示词、脚本、文档及随附样张）采用 **PolyForm Noncommercial License 1.0.0**。完整法律条文请见 [LICENSE](LICENSE)，官方页面见 <https://polyformproject.org/licenses/noncommercial/1.0.0>。
