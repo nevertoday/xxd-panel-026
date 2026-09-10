@@ -19,47 +19,33 @@
 
 ## 16:9 좌우 구성 예시
 
+서로 다른 원본 네 장으로 만든 16:9 완성 캔버스. 왼쪽은 실사, 오른쪽은 이 Panel 디자인, 정확히 50:50.
+
 <table>
   <tr>
-    <td width="50%"><img src="./assets/examples/sample-05.png" alt="XXD Panel 026 예시 5"></td>
-    <td width="50%"><img src="./assets/examples/sample-06.png" alt="XXD Panel 026 예시 6"></td>
+    <td width="50%"><img src="./assets/examples/sample-05.png" alt="XXD Panel 026 Sample 5"></td>
+    <td width="50%"><img src="./assets/examples/sample-06.png" alt="XXD Panel 026 Sample 6"></td>
   </tr>
   <tr>
-    <td width="50%"><img src="./assets/examples/sample-07.png" alt="XXD Panel 026 예시 7"></td>
-    <td width="50%"><img src="./assets/examples/sample-08.png" alt="XXD Panel 026 예시 8"></td>
+    <td width="50%"><img src="./assets/examples/sample-07.png" alt="XXD Panel 026 Sample 7"></td>
+    <td width="50%"><img src="./assets/examples/sample-08.png" alt="XXD Panel 026 Sample 8"></td>
   </tr>
 </table>
 
 ## 3:4 상하 구성 예시
 
-위 16:9 예시와 같은 네 개의 독립 소스를 완전한 3:4 상하 캔버스로 다시 생성했습니다. 위쪽은 현실 사진을 유지하고 아래쪽은 Panel 026의 원본 프롬프트에 따라 재구성합니다. 영어 문구는 각 사진의 내용·분위기·함의에서만 생성했으며 모든 결과를 개별 검수했습니다.
+16:9 세트와 다른 원본 네 장으로 만든 3:4 상하 완성 캔버스. 위는 실사, 아래는 디자인, 정확히 50:50.
 
 <table>
   <tr>
-    <td width="50%"><img src="./assets/examples/sample-09.png" alt="XXD Panel 026 추가 상하 예시 1"></td>
-    <td width="50%"><img src="./assets/examples/sample-10.png" alt="XXD Panel 026 추가 상하 예시 2"></td>
+    <td width="50%"><img src="./assets/examples/sample-09.png" alt="XXD Panel 026 additional top-bottom sample 1"></td>
+    <td width="50%"><img src="./assets/examples/sample-10.png" alt="XXD Panel 026 additional top-bottom sample 2"></td>
   </tr>
   <tr>
-    <td width="50%"><img src="./assets/examples/sample-11.png" alt="XXD Panel 026 추가 상하 예시 3"></td>
-    <td width="50%"><img src="./assets/examples/sample-12.png" alt="XXD Panel 026 추가 상하 예시 4"></td>
+    <td width="50%"><img src="./assets/examples/sample-11.png" alt="XXD Panel 026 additional top-bottom sample 3"></td>
+    <td width="50%"><img src="./assets/examples/sample-12.png" alt="XXD Panel 026 additional top-bottom sample 4"></td>
   </tr>
 </table>
-
-> [Xiaoxiaodong (@xiaoxiaodong01)](https://x.com/xiaoxiaodong01/status/2090433161096581434) · 2026년 8월 20일<br>
-> GPT2 × 부조 × 크롭 × 절제 × 미학 프롬프트 × VOL.026<br>
-> 사진을 그대로 다시 그리지 않습니다. 중요한 것을 찾아 몇 개의 선과 색면으로 줄이면서도 한눈에 알아볼 수 있게 합니다.
-
-<p align="center"><a href="https://x.com/xiaoxiaodong01/status/2090433161096581434">원문 게시물과 전체 프롬프트 보기 →</a></p>
-
-이 예시들은 026의 미학적 동기를 보여 줄 뿐, 게시물에서 사용한 과거 캔버스를 현재의 기본 크기로 만들지 않습니다. 네 모드는 계속해서 아래의 생성 전 화면비 확인 및 사용자 지정 크기 규칙을 따릅니다.
-
-> 조용히 알아보고 · 부드럽게 덜어 내며 · 종이가 숨 쉬게 합니다
-
-XXD Panel 026은 Codex와 호환 에이전트를 위한 이미지 생성 Skill입니다. 사진 속 피사체, 외곽선, 자세, 구조 축, 거리, 서사적 관계를 읽고, 그 근거를 미니멀한 기하, 가는 선, 부드러운 색채군, 살짝 도드라진 종이 부조로 옮깁니다.
-
-사진 위에 저채도 필터를 씌우는 작업이 아닙니다. 왜 이 사진이 주목받을 가치가 있는지를 보존합니다.
-
-<!-- xxd-human-intro:start -->
 ## 적합한 상황과 해결하는 문제
 
 사진을 포스터, 표지, 소셜 콘텐츠 또는 배경화면으로 사용할 때 핵심 과제는 단순히 화풍을 바꾸는 것이 아닙니다. 다시 디자인한 뒤에도 대상의 정체성, 중요한 관계, 분위기와 식별성을 유지해야 합니다.

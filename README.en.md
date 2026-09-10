@@ -19,6 +19,8 @@
 
 ## 16:9 Left–Right Samples
 
+Four independent sources on complete 16:9 canvases: reality left, this Panel's design right, exact 50:50. English copy is generated from each photograph.
+
 <table>
   <tr>
     <td width="50%"><img src="./assets/examples/sample-05.png" alt="XXD Panel 026 Sample 5"></td>
@@ -32,7 +34,7 @@
 
 ## 3:4 Top–Bottom Samples
 
-These four works reuse the same four independent sources as the 16:9 set above, now regenerated as complete 3:4 top–bottom canvases. The original photograph remains above; the lower design follows Panel 026's original brief. English copy is generated only from each photograph's content, mood, or implication, and every result was individually reviewed.
+Four further independent sources, different from the 16:9 set, regenerated as complete 3:4 top–bottom canvases. The original photograph remains above; the lower design follows this Panel's original brief.
 
 <table>
   <tr>
@@ -44,22 +46,6 @@ These four works reuse the same four independent sources as the 16:9 set above, 
     <td width="50%"><img src="./assets/examples/sample-12.png" alt="XXD Panel 026 additional top-bottom sample 4"></td>
   </tr>
 </table>
-
-> [Xiaoxiaodong (@xiaoxiaodong01)](https://x.com/xiaoxiaodong01/status/2090433161096581434) · 20 August 2026<br>
-> GPT2 × relief × crop × restraint × aesthetic prompt × VOL.026<br>
-> It does not redraw the photograph. It finds what matters, reduces the scene to a few lines and colour planes, and still remains immediately recognisable.
-
-<p align="center"><a href="https://x.com/xiaoxiaodong01/status/2090433161096581434">View the original post and full prompt →</a></p>
-
-These samples demonstrate the 026 aesthetic motive; they do not turn the post's earlier canvas into a current default. The four modes still follow the explicit pre-generation canvas and custom sizing logic below.
-
-> RECOGNISE QUIETLY · REDUCE GENTLY · LET THE PAPER BREATHE
-
-XXD Panel 026 is an image-generation skill for Codex and compatible agents. It reads the subject, contour, posture, structural axes, distance, and narrative relationships in a photograph, then translates that evidence into minimal geometry, fine lines, a soft colour family, and barely raised paper relief.
-
-It does not place a muted-colour filter over a photo. It preserves why that particular photograph deserves attention.
-
-<!-- xxd-human-intro:start -->
 ## Where this Panel fits — and what it solves
 
 When a photograph needs to become a poster, cover, social asset, or wallpaper, the real design problem is rarely a simple change of style. The challenge is to redesign it while preserving identity, key relationships, mood, and recognisability.
