@@ -1,0 +1,114 @@
+{
+  "skill_description": "XXD Panel 026｜Geometric Order: translates the facts of a photo into quiet, gentle geometry that stays instantly recognisable: simple geometric shapes, flat colour, fine contour and structural lines and a few horizontal or dividing lines, balanced near the centre without rigid symmetry, with a faint relief so the shapes seem lightly pressed into or raised from the paper (never obvious 3D), in a soft humanist palette from the photo such as off-white, warm white, light grey, sand, greyed pink, pale ochre, misty blue and sage, and a concise title with a few numbers, state words or micro notes set along the lines, like an architecture or exhibition poster. Outputs PNG top-bottom or left-right comparisons, design-only images, or phone/tablet/desktop/watch wallpapers, from one photo or a folder. Use when the user invokes xxd-panel-026 or asks for gentle geometric posters, humanist flat geometry with subtle embossing or architecture-style minimal graphics from a photo.",
+  "short_description": "几何秩序：把照片转成安静温和、略带浅浮雕感、仍能一眼认出的几何图形",
+  "zh-CN": {
+    "name": "几何秩序",
+    "tagline": "把照片里的事实，转成安静、温和、仍能一眼认出的几何秩序。",
+    "look": "主体用简洁几何形、扁平色块、细线和结构线重新概括，不做写实，也不堆细节，但特征清楚，一眼能认出原物；旁边可加几条水平线、轮廓线或空间分割线。构图偏居中但不僵硬对称，靠比例、正负形、疏密和大片留白排出安静的秩序，几何形带一点浅浅的浮雕感，像轻轻压印或微微隆起在纸面上，而不是明显的 3D。颜色转成更有人文气质的柔和色组：米白、暖白、浅灰、沙色、灰粉、浅赭、雾蓝、鼠尾草绿，从照片里保留最有气质的主色。文字是简洁标题加少量编号、状态词或微型注释，沿结构线或留白边缘排布。",
+    "traits": [
+      "轻柔化简",
+      "几何",
+      "安静",
+      "纸面呼吸",
+      "主体辨识"
+    ],
+    "good": [
+      "结构清楚的建筑和物件：一栋小楼、一座桥、一把茶壶、一把椅子",
+      "姿态简单的人或动物：骑车的人、站着的鸟、坐着的猫",
+      "想做成展览海报、品牌视觉或建筑海报的照片"
+    ],
+    "poor": [
+      "想要高饱和、鲜艳热闹或冷峻科技感配色的需求",
+      "需要写实细节、复杂场景或明显 3D 立体效果的图",
+      "主体模糊、轮廓不清的照片，几何化后会认不出来"
+    ]
+  },
+  "en": {
+    "name": "Geometric Order",
+    "tagline": "Translates the facts of a photo into quiet, gentle geometry that you can still recognise at a glance.",
+    "look": "The subject is rebuilt from simple geometric shapes, flat colour, fine lines and structural lines, without realism or piled-up detail, yet with its features clear enough to recognise at once; a few horizontal lines, contour lines or dividing lines can be added. The layout sits near the centre without rigid symmetry, finding a calm order through proportion, positive and negative shapes, density and wide whitespace, and the shapes carry a faint relief, as if lightly pressed into or raised from the paper rather than obviously 3D. Colours turn into a soft, humanist set: off-white, warm white, light grey, sand, greyed pink, pale ochre, misty blue and sage, keeping the photo's most characterful main colour. Text is a concise title with a few numbers, state words or micro notes set along the structural lines or the edge of the whitespace.",
+    "traits": [
+      "Gentle simplification",
+      "Geometry",
+      "Quiet",
+      "Breathing paper",
+      "Recognisable subject"
+    ],
+    "good": [
+      "Buildings and objects with clear structure: a small house, a bridge, a teapot, a chair",
+      "People or animals in a simple pose: someone on a bike, a standing bird, a sitting cat",
+      "Photos you want as an exhibition poster, brand visual or architecture poster"
+    ],
+    "poor": [
+      "Requests for saturated, loud or cold high-tech colour",
+      "Images that need realistic detail, complex scenes or obvious 3D",
+      "Blurry photos with unclear outlines, which become unrecognisable once made geometric"
+    ]
+  },
+  "ja": {
+    "name": "幾何学的秩序",
+    "tagline": "写真の中の事実を、静かでやさしく、それでも一目でわかる幾何学の秩序に置き換えます。",
+    "look": "主役はシンプルな幾何形、平らな色面、細い線、構造線で描き直し、写実にも細部の積み重ねにもせず、それでも特徴ははっきりしていて一目で元のものとわかります。水平線、輪郭線、空間を分ける線を少し加えることもあります。構図は中央寄りですが硬い対称にはせず、比率、正負の形、疎密、大きな余白で静かな秩序をつくります。形にはごく浅いレリーフ感があり、紙にそっと押し当てたか、わずかに盛り上がったように見えますが、はっきりした 3D ではありません。色はより人間味のあるやわらかな組み合わせに変え、オフホワイト、温かい白、淡いグレー、砂色、グレーがかったピンク、淡い黄土、霧のブルー、セージグリーンを基調に、写真のいちばん品のある主色を残します。文字は簡潔なタイトルに少しの番号、状態語、小さな注記を添え、構造線や余白の縁に沿って置きます。",
+    "traits": [
+      "やさしい簡略化",
+      "幾何学",
+      "静けさ",
+      "紙の呼吸",
+      "主役がわかる"
+    ],
+    "good": [
+      "構造のはっきりした建物やモノ：小さな建物、橋、ティーポット、椅子",
+      "シンプルなポーズの人や動物：自転車に乗る人、立っている鳥、座っている猫",
+      "展覧会ポスター、ブランドビジュアル、建築ポスターにしたい写真"
+    ],
+    "poor": [
+      "高彩度でにぎやかな配色や、冷たいハイテク感の配色を求める場合",
+      "写実的な細部、複雑な場面、はっきりした 3D の立体感が必要な画像",
+      "主役がぼやけて輪郭のはっきりしない写真（幾何学にすると見分けがつかなくなります）"
+    ]
+  },
+  "ko": {
+    "name": "기하학적 질서",
+    "tagline": "사진 속 사실을 조용하고 온화하면서도 한눈에 알아볼 수 있는 기하학적 질서로 옮깁니다.",
+    "look": "주인공은 간결한 기하 도형, 평평한 색면, 가는 선과 구조선으로 다시 정리하며, 사실적으로 그리거나 세부를 쌓지 않지만 특징은 분명해 한눈에 원래 대상을 알아봅니다. 수평선, 윤곽선, 공간을 나누는 선 몇 개를 더하기도 합니다. 구도는 가운데에 가깝지만 딱딱한 대칭은 피하고, 비율, 양음 형태, 밀도, 넓은 여백으로 조용한 질서를 만듭니다. 도형에는 아주 얕은 부조감이 있어 종이에 살짝 눌러 찍었거나 조금 솟아오른 듯 보이지만, 뚜렷한 3D는 아닙니다. 색은 더 인문적인 부드러운 조합으로 바꾸어 오프화이트, 따뜻한 흰색, 연회색, 모래색, 회분홍, 연한 황토, 안개 파랑, 세이지 그린을 바탕으로 사진에서 가장 품위 있는 주색을 남깁니다. 글자는 간결한 제목에 약간의 번호, 상태어, 작은 메모를 더해 구조선이나 여백 가장자리를 따라 둡니다.",
+    "traits": [
+      "부드러운 단순화",
+      "기하학",
+      "고요함",
+      "종이의 숨결",
+      "알아볼 수 있는 주인공"
+    ],
+    "good": [
+      "구조가 분명한 건물과 사물: 작은 건물, 다리, 찻주전자, 의자",
+      "단순한 자세의 사람이나 동물: 자전거 타는 사람, 서 있는 새, 앉아 있는 고양이",
+      "전시 포스터, 브랜드 비주얼, 건축 포스터로 쓰고 싶은 사진"
+    ],
+    "poor": [
+      "채도 높고 화려한 배색이나 차가운 하이테크 배색을 원하는 경우",
+      "사실적인 디테일, 복잡한 장면, 뚜렷한 3D 입체감이 필요한 이미지",
+      "주인공이 흐릿하고 윤곽이 분명하지 않은 사진(기하로 바꾸면 알아보기 어렵습니다)"
+    ]
+  },
+  "ar": {
+    "name": "نظام هندسي",
+    "tagline": "يترجم وقائع الصورة إلى هندسة هادئة لطيفة يبقى عنصرها معروفاً من النظرة الأولى.",
+    "look": "يُعاد بناء العنصر من أشكال هندسية بسيطة ومساحات لونية مسطّحة وخطوط رفيعة وخطوط بنية، بلا واقعية ولا تكديس للتفاصيل، لكن مع ملامح واضحة تكفي للتعرّف عليه فوراً، ويمكن إضافة بضعة خطوط أفقية أو خطوط حدود أو خطوط تقسيم. يقترب التكوين من المركز من دون تماثل جامد، ويجد نظامه الهادئ في النِسب والأشكال الموجبة والسالبة والكثافة والفراغ الواسع، وتحمل الأشكال نتوءاً خفيفاً كأنها مطبوعة بضغط رقيق على الورق أو بارزة منه قليلاً، لا مجسّمة بوضوح. تتحول الألوان إلى مجموعة ناعمة ذات طابع إنساني: أبيض مائل إلى الكريمي، وأبيض دافئ، ورمادي فاتح، ورملي، ووردي رمادي، ومغرة فاتحة، وأزرق ضبابي، وأخضر مريمي، مع الإبقاء على أكثر ألوان الصورة تميّزاً. النص عنوان موجز مع قليل من الأرقام أو كلمات الحالة أو الملاحظات الدقيقة على خطوط البنية أو حافة الفراغ.",
+    "traits": [
+      "تبسيط لطيف",
+      "هندسة",
+      "هدوء",
+      "ورق يتنفس",
+      "عنصر قابل للتعرّف"
+    ],
+    "good": [
+      "مبانٍ وأشياء واضحة البنية: مبنى صغير، جسر، إبريق شاي، كرسي",
+      "أشخاص أو حيوانات في وضعية بسيطة: شخص على دراجة، طائر واقف، قطة جالسة",
+      "صور تريدها ملصق معرض أو هوية بصرية لعلامة تجارية أو ملصقاً معمارياً"
+    ],
+    "poor": [
+      "طلب ألوان مشبعة صاخبة أو ألوان تقنية باردة",
+      "صور تحتاج إلى تفاصيل واقعية أو مشاهد معقدة أو تجسيم واضح",
+      "صور ضبابية بحدود غير واضحة، تصير غير معروفة حين تُحوَّل إلى هندسة"
+    ]
+  }
+}
